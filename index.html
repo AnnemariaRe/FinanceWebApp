@@ -4,23 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Finance app</title>
+    
+    <script src="src/components/header.js" type="text/javascript" defer></script>
 </head>
 
 <body bgcolor="#D0E8FE">
-    <header>
-        <div class="menu-bar">
-            <img src="./src/img/budget_icon.png" width="80px" height="80px"/>
-            <h1>Finance app</h1>
-            <nav class="menu-nav">
-                <ul class="menu-list">
-                    <li><a href="">Главная</a></li>
-                    <li><a href="">Кошелек</a></li>
-                    <li><a href="">История</a></li>
-                    <li><a href="">Настройки</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <header-component></header-component>
     <main>
         <div class="content">
             <div class="heading">
@@ -34,22 +23,26 @@
                 &#10133 положить
             </button>
 
-            <div class="graph-expense">
+            <section class="graphs">
+                <div class="graph-expense">
                 <p>*тут будет график*<p>
             </div>
             <div class="graph-income">
                 <p>*тут будет график*</p>
             </div>
-
-            <div class="total">
-                <h3>Всего: 124000 ₽</h3>
-            </div>
-            <div class="available">
-                <h3>Доступно сейчас: 68000 ₽</h3> 
-            </div>
-            <div class="savings">
-                <h3>Сбережения: 56000 ₽</h3>
-            </div>
+            </section>
+            
+            <section class="balance-info">
+                <div class="total">
+                    <h3>Всего: 124000 ₽</h3>
+                </div>
+                <div class="available">
+                    <h3>Доступно сейчас: 68000 ₽</h3> 
+                </div>
+                <div class="savings">
+                    <h3>Сбережения: 56000 ₽</h3>
+                </div>
+            </section>
 
             <div class="graph-categories">
                 <pre> 
@@ -74,12 +67,15 @@
                   $$$$$        
                 </pre>
             </div>
-            <div class="month-expense">
-                <h3>расход за месяц: 31000 ₽</h3>
-            </div>
-            <div class="month-income">
-                <h3>доход за месяц: 50000 ₽</h3>
-            </div>
+
+            <section class="month-info">
+                <div class="month-expense">
+                    <h3>расход за месяц: 31000 ₽</h3>
+                </div>
+                <div class="month-income">
+                    <h3>доход за месяц: 50000 ₽</h3>
+                </div>
+            </section>
           </div>
 
           
@@ -90,6 +86,5 @@
         </div>
     </footer>
 </body>
-
 </html>
 
