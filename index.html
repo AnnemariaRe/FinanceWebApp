@@ -5,45 +5,46 @@
     <meta charset="UTF-8">
     <title>Finance app</title>
     
+    <link href="src/css/style.css" rel="stylesheet">
     <script src="src/components/header.js" type="text/javascript" defer></script>
 </head>
 
-<body bgcolor="#D0E8FE">
+<body bgcolor="#a3b18a">
     <header-component></header-component>
     <main>
         <div class="content">
-            <div class="heading">
-                <h1>Добро пожаловать, друг!!!</h1>
-                <p>Ты находишься на главной странице приложения. Тут расположены актуальные данные по твоим финансам.</p>
-            </div>
-            <button name="expense" value="expense">
-                &#10134 снять
-            </button>
-            <button name="income" value="income">
-                &#10133 положить
-            </button>
+            <section class="first-block">
+                <div class="heading">
+                    <h1>Добро пожаловать, друг!!!</h1>
+                    <p>Ты находишься на главной странице приложения. Тут расположены актуальные данные по твоим финансам.</p>
+                </div>
+                <a href="#" class="button">
+                    &#10134 снять
+                </a>
 
-            <section class="graphs">
-                <div class="graph-expense">
-                <p>*тут будет график*<p>
-            </div>
-            <div class="graph-income">
-                <p>*тут будет график*</p>
-            </div>
+                <a href="#" class="button">
+                    &#10133 положить
+                </a>
+            </section>
+
+            <section class="second-block">
+                <section class="balance-all">
+                    <div class="balance-item">
+                        <h3>Всего: 124000 ₽</h3>
+                    </div>
+                    <div class="balance-item">
+                        <h3>Доступно сейчас: 68000 ₽</h3> 
+                    </div>
+                    <div class="balance-item">
+                        <h3>Сбережения: 56000 ₽</h3>
+                    </div>
+                </section>
+            
+                <section class="graph-expense">
+                    <img src="src/img/expenses-graph.png"/>
+                </section>
             </section>
             
-            <section class="balance-info">
-                <div class="balance">
-                    <h3>Всего: 124000 ₽</h3>
-                </div>
-                <div class="available">
-                    <h3>Доступно сейчас: 68000 ₽</h3> 
-                </div>
-                <div class="savings">
-                    <h3>Сбережения: 56000 ₽</h3>
-                </div>
-            </section>
-
             <div class="graph-categories">
                 <pre> 
                    $$$$$      
@@ -68,16 +69,15 @@
                 </pre>
             </div>
 
-            <section class="month-info">
-                <div class="month-expense">
+            <section class="month-balance-all">
+                <div class="month-balance-item">
                     <h3>расход за месяц: 31000 ₽</h3>
                 </div>
-                <div class="month-income">
+                <div class="month-balance-item">
                     <h3>доход за месяц: 50000 ₽</h3>
                 </div>
             </section>
-          </div>
-
+        </div>
           
     </main>
     <footer>
