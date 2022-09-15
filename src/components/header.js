@@ -7,7 +7,7 @@ class Header extends HTMLElement {
       this.innerHTML = `
         <header>
         <div class="menu-bar">
-            <img src="src/img/budget_icon.png" width="120px" height="120px"/>
+            <img src="src/img/calculator.png" width="120px" height="120px"/>
             <nav class="menu-nav">
                 <a href="index.html">Главная</a>
                 <a href="src/pages/wallet.html">Кошелек</a>

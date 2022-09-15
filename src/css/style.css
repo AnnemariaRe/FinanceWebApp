@@ -3,20 +3,23 @@ body {
 }
 
 main {
-  padding-left: 200px;
+  padding-left: 230px;
+  padding-right: 50px;
   height: 1000px;
 }
 
-.menu-bar {    
+
+.menu-bar {   
+    margin-left: -11px; 
   width: 200px;
-  background-color: #588157;
+  background-color: #dad7cd;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
 .menu-bar a {
-    padding: 10px 6px 10px 15px;
+    padding: 15px 30px 15px 20px;
     text-decoration: none;
     font-size: 25px;
     color: #16241e;
@@ -24,31 +27,36 @@ main {
 }
 
 .menu-bar a:hover {
-  background-color: #dad7cd;
+  background-color: #a3b18a;
+}
+
+.first-block {
+    margin-top: -20px;
+    display: flex;
 }
 
 .heading {
     width:70%;
     color: #344e41;
-    margin: 7px; 
-    padding: 10px; 
     font-size: 18px;
-}
-
-.first-block {
-    display:flex;
+    margin: 10px 50px;
 }
 
 .button {
+    width: 11%;
     background-color: #588157;
     color: whitesmoke;
-    padding: 15px 26px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: 40px 7px;
+    margin: 60px 40px 60px 2px;
     cursor: pointer;
+}
+
+.button:hover {
+    background-color: #3a5a40;
   }
 
 .balance-all {
@@ -63,10 +71,58 @@ main {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 25px;
+    font-size: 20px;
     margin: 30px 30px;
 }
 
 .second-block {
     display: flex;
+}
+
+.balance-all {
+    width: 40%;
+    display: table;
+}
+
+.balance-item {
+    width: 70%;
+    font-size: 21px;
+    padding: 1px 5px;
+    margin: 10px 40px;
+}
+
+.graph-expense {
+    width: 60%;
+}
+
+.third-block {
+    display: flex;
+}
+
+.graph-categories {
+    width: 60%;
+}
+
+.month-balance-all {
+    margin-top: 0;
+    width: 35%;
+    display: table;
+}
+
+.month-balance-item {
+    width: 75%;
+    background-color: #DAD7CD;
+    color: #344e41;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 110px;
+}
+
+img {
+    padding: 30px 50px;
+    width: 100px;
+    height: 100px;
 }

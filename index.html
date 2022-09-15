@@ -6,6 +6,8 @@
     <title>Finance app</title>
     
     <link href="src/css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="src/components/header.js" type="text/javascript" defer></script>
 </head>
 
@@ -19,64 +21,94 @@
                     <p>Ты находишься на главной странице приложения. Тут расположены актуальные данные по твоим финансам.</p>
                 </div>
                 <a href="#" class="button">
-                    &#10134 снять
+                    <i class="fa fa-minus"></i>
+                    снять
                 </a>
 
                 <a href="#" class="button">
-                    &#10133 положить
+                    <i class="fa fa-plus"></i>
+                    положить
                 </a>
             </section>
 
             <section class="second-block">
                 <section class="balance-all">
                     <div class="balance-item">
-                        <h3>Всего: 124000 ₽</h3>
+                        <h4>Всего: 124000 ₽</h4>
                     </div>
                     <div class="balance-item">
-                        <h3>Доступно сейчас: 68000 ₽</h3> 
+                        <h4>Доступно сейчас: 68000 ₽</h4> 
                     </div>
                     <div class="balance-item">
-                        <h3>Сбережения: 56000 ₽</h3>
+                        <h4>Сбережения: 56000 ₽</h4>
                     </div>
                 </section>
             
                 <section class="graph-expense">
-                    <img src="src/img/expenses-graph.png"/>
+                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                    <script>
+                    var xValues = ["1", "2", "3", "4", "5", "6", "7"];
+                    var yValues = [750, 490, 640, 840, 750, 1200, 480];
+                    var barColors = ["grey","grey","grey","grey","grey","grey","grey"];
+
+                    new Chart("myChart", {
+                    type: "bar",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        title: {
+                        display: true,
+                        text: "Траты за неделю"
+                        }
+                    }
+                    });
+                    </script>
                 </section>
             </section>
             
+            <section class="third-block">
             <div class="graph-categories">
-                <pre> 
-                   $$$$$      
-                   $:::$      
-               $$$$$:::$$$$$$ 
-             $$::::::::::::::$
-            $:::::$$$$$$$::::$
-            $::::$       $$$$$
-            $::::$            
-            $::::$            
-            $:::::$$$$$$$$$   
-             $$::::::::::::$$ 
-               $$$$$$$$$:::::$
-                        $::::$
-                        $::::$
-            $$$$$       $::::$
-            $::::$$$$$$$:::::$
-            $::::::::::::::$$ 
-             $$$$$$:::$$$$$   
-                  $:::$       
-                  $$$$$        
-                </pre>
+                <!-- <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                    <script>
+                    var xValues = ["Продукты", "Рестораны", "Жилье", "Проезд", "Уход"];
+                    var yValues = [6020, 2300, 8400, 1200, 2500];
+                    var barColors = [
+                    "#b91d47",
+                    "#00aba9",
+                    "#2b5797",
+                    "#e8c3b9",
+                    "#1e7145"
+                    ];
+
+                    new Chart("myChart", {
+                    type: "pie",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                        }]
+                    }});
+                    </script> -->
             </div>
 
             <section class="month-balance-all">
                 <div class="month-balance-item">
-                    <h3>расход за месяц: 31000 ₽</h3>
+                    <h4>расход за месяц: 31000 ₽</h4>
                 </div>
                 <div class="month-balance-item">
-                    <h3>доход за месяц: 50000 ₽</h3>
+                    <h4>доход за месяц: 50000 ₽</h4>
                 </div>
             </section>
+        </section>
         </div>
           
     </main>
