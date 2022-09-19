@@ -15,6 +15,7 @@ main {
     position: fixed;
     height: 100%;
     overflow: auto;
+    margin-bottom: -5%;
 }
 
 .menu-bar a {
@@ -70,7 +71,7 @@ main {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 3% 8%;
+    margin: 5% 8%;
     font-size: 21px;
 }
 
