@@ -8,7 +8,6 @@ main {
     height: 1000px;
 }
 
-
 .menu-bar {   
     margin-left: -1%; 
     width: 14%;
@@ -90,12 +89,27 @@ main {
     display: flex;
 }
 
-.graph-categories {
+.history {
     width: 60%;
+    background-color: #DAD7CD;
+    list-style: none;
+    padding-left: 3%;
+    padding-bottom: 4%;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 0%;
 }
 
+.history li {
+    position: relative;
+    padding: 5% 5%;
+    color: #344e41;
+    font-variant: small-caps;
+    font-size: 20px;
+  }
+
 .month-balance-all {
-    margin-top: 0%;
+    margin-top: 0.3%;
     width: 35%;
     display: table;
 }
@@ -109,11 +123,33 @@ main {
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: 5% 25%;
+    margin: 5% 10%;
 }
 
 img {
     padding: 15% 26%;
     width: 100px;
     height: 100px;
+}
+
+footer {
+    font-family: "Lato", sans-serif;
+    width: 80%;
+    background-color: #DAD7CD;
+    color: #344e41;
+    margin-top: 10%;
+    margin-left: 16%;
+    padding: 0.5%;
+    text-align: center;
+}
+
+.footer-bar a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #16241e;
+    display: block;
+}
+
+.footer-bar a:hover {
+  color: #FCFCFC;
 }
