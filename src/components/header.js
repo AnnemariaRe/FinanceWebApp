@@ -12,7 +12,6 @@ class Header extends HTMLElement {
                 <a href="index.html">Главная</a>
                 <a href="src/pages/wallet.html">Кошелек</a>
                 <a href="src/pages/history.html">История</a>
-                <a href="src/pages/settings.html">Настройки</a>
             </nav>
         </div>
         </header>
