@@ -8,7 +8,7 @@ A website - a financial accounting application with functionality:
 - expense and income statistics
 - history of all transactions
 
-
+---------------------------------------
 ### Website template
 <img src="/src/img/index_page.png"/>
 <img src="/src/img/wallet_page.png"/>
