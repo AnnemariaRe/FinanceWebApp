@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WalletKeeper</title>
+    
+    <link href="src/css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="src/components/header.js" type="text/javascript" defer></script>
+</head>
+
+<body bgcolor="#FCFCFC">
+    <header-component></header-component>
+    <main>
+        <div class="content">
+            <section class="first-block">
+                <div class="heading">
+                    <h1>Добро пожаловать, друг!!!</h1>
+                    <p>Ты находишься на главной странице приложения. Тут расположены актуальные данные по твоим финансам.</p>
+                </div>
+                <a href="#" class="button">
+                    <i class="fa fa-minus"></i>
+                    снять
+                </a>
+
+                <a href="#" class="button">
+                    <i class="fa fa-plus"></i>
+                    положить
+                </a>
+            </section>
+
+            <section class="second-block">
+                <section class="balance-all">
+                    <div class="balance-item">
+                        <h4>Всего средств: 124000 ₽</h4>
+                    </div>
+                    <div class="balance-item">
+                        <h4>Доступно сейчас: 68000 ₽</h4> 
+                    </div>
+                    <div class="balance-item">
+                        <h4>Сбережения: 56000 ₽</h4>
+                    </div>
+                </section>
+            
+                <section class="graph-expense">
+                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                    <script>
+                    var xValues = ["1", "2", "3", "4", "5", "6", "7"];
+                    var yValues = [750, 490, 640, 840, 750, 1200, 480];
+                    var barColors = ["grey","grey","grey","grey","grey","grey","grey"];
+
+                    new Chart("myChart", {
+                    type: "bar",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        title: {
+                        display: true,
+                        text: "Траты за неделю"
+                        }
+                    }
+                    });
+                    </script>
+                </section>
+            </section>
+            
+            <section class="third-block">
+                <div class="history">
+                    <ul class="menu-list">
+                        <li>Продукты  <b>-1067₽</b>  Сбербанк (основной)  18.09.2022</li>
+                        <li>Продукты  <b>-765₽</b>  Сбербанк (основной)  17.09.2022</li>
+                        <li>Одежда  <b>-4091₽</b>  Наличные 16.09.2022</li>
+                        <li>Зарплата  <b>+50000₽</b>  Альфабанк (основной)  16.09.2022</li>
+                        <li>Бытовые покупки  <b>-3409₽</b>  Сбербанк (основной)  13.09.2022</li>
+                    </ul>
+                </div>
+
+                <section class="month-balance-all">
+                    <div class="month-balance-item">
+                        <h4>расход за месяц: 31000 ₽</h4>
+                    </div>
+                    <div class="month-balance-item">
+                        <h4>доход за месяц: 50000 ₽</h4>
+                    </div>
+                </section>
+            </section>
+        </div>
+          
+    </main>
+    <footer>
+        <div class="footer-bar">
+            <p><a href="https://t.me/annmarry05">@annmarry05</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+
