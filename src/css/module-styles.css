@@ -1,0 +1,65 @@
+.first-block {
+    margin-top: -1%;
+    display: flex;
+}
+
+.second-block {
+    display: flex;
+}
+
+.balance-item {
+    width: 70%;
+    background-color: #C5CEB6;
+    color: #344e41;
+    padding: 0% 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5% 8%;
+    font-size: 21px;
+}
+
+.balance-all {
+    width: 40%;
+    display: table;
+}
+
+
+.third-block {
+    display: flex;
+}
+
+.history {
+    width: 60%;
+    background-color: #DAD7CD;
+    padding-left: 3%;
+    padding-bottom: 4%;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+.history li {
+    position: relative;
+    padding: 5% 5%;
+    color: #344e41;
+    font-size: 20px;
+  }
+
+.month-balance-all {
+    margin-top: 0.3%;
+    width: 35%;
+    display: table;
+}
+
+.month-balance-item {
+    width: 75%;
+    background-color: #C5CEB6;
+    color: #344e41;
+    padding: 1% 5%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5% 10%;
+}
