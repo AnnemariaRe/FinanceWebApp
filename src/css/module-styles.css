@@ -81,3 +81,8 @@ table tr:nth-child(even){background-color: #ECE8DD;}
     background-color: #DAD7CD;
     margin: 2% 2% 2% 2%;
 }
+
+.graphs {
+    width: 50%;
+    display: table;
+}

@@ -126,38 +126,72 @@
                       </table>
                 </div>
 
-                <div class="graph-expense">
-                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                <div class="graphs">
+                    <div class="graph">
+                        <h3>Расходы по категориям за месяц</h3>
+                        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
 
-                    <script>
-                    var xValues = ["Продукты", "Рестораны", "Бытовые", "Коммунальные", "Услуги красоты"];
-                    var yValues = [5200, 701, 4456, 2400, 1500];
-                    var barColors = [
-                      "#b91d47",
-                      "#00aba9",
-                      "#2b5797",
-                      "#e8c3b9",
-                      "#1e7145"
-                    ];
-                    
-                    new Chart("myChart", {
-                      type: "pie",
-                      data: {
-                        labels: xValues,
-                        datasets: [{
-                          backgroundColor: barColors,
-                          data: yValues
-                        }]
-                      },
-                      options: {
-                        legend: {
-                            position: 'right',
+                        <script>
+                        var xValues = ["Продукты", "Рестораны", "Бытовые", "Коммунальные", "Услуги красоты"];
+                        var yValues = [5200, 701, 4456, 2400, 1500];
+                        var barColors = [
+                        "#426840",
+                        "#459743",
+                        "#A0C69F",
+                        "#152815",
+                        "#8BDB89"
+                        ];
+                        
+                        new Chart("myChart", {
+                        type: "pie",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                            }]
+                        },
+                        options: {
+                            legend: {
+                                position: 'right',
+                            }
                         }
-                    }
-                    });
-                    </script>         
-                </div>
+                        });
+                        </script>         
+                    </div>
 
+                    <div class="graph">
+                        <h3>Доходы по категориям за месяц</h3>
+                        <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
+
+                        <script>
+                        var xValues = ["Зарплата", "Подработка", "Подарки", "Стипендия"];
+                        var yValues = [40000, 8000, 15000, 5000];
+                        var barColors = [
+                        "#426840",
+                        "#459743",
+                        "#A0C69F",
+                        "#152815"
+                        ];
+                        
+                        new Chart("myChart2", {
+                        type: "pie",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                            }]
+                        },
+                        options: {
+                            legend: {
+                                position: 'right',
+                            }
+                        }
+                        });
+                        </script>         
+                    </div>
+                </div>
 
         </div>
     </main>
