@@ -71,3 +71,13 @@ table tr:nth-child(even){background-color: #ECE8DD;}
     font-size: 20px;
     margin: 5% 13%;
 }
+
+.history-block {
+    display: flex;
+}
+
+.history-list {
+    width: 75%;
+    background-color: #DAD7CD;
+    margin: 2% 2% 2% 2%;
+}

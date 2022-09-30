@@ -10,6 +10,7 @@
     <link href="../css/layout-styles.css" rel="stylesheet">
     <link href="../css/module-styles.css" rel="stylesheet">
     <script src="../components/header.js" type="text/javascript" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body bgcolor="#FCFCFC">
@@ -17,9 +18,8 @@
     <main>
         <div class="content">
 
-
-            <section class="third-block">
-                <div class="history">
+            <section class="history-block">
+                <div class="history-list">
                     <table>
                         <tr>
                             <th>Категория</th>
@@ -81,7 +81,81 @@
                             <td>Наличные</td>
                             <td>10.09.2022</td>
                         </tr>
+                        <tr>
+                            <td>Продукты</td>
+                            <td>-1067₽</td>
+                            <td>Сбербанк (основной)</td>
+                            <td>18.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Продукты</td>
+                            <td>-765₽</td>
+                            <td>Сбербанк (основной)</td>
+                            <td>17.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Одежда</td>
+                            <td>-4091₽</td>
+                            <td>Наличные</td>
+                            <td>16.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Бытовые покупки</td>
+                            <td>-3409₽</td>
+                            <td>Сбербанк (основной)</td>
+                            <td>16.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Зарплата</td>
+                            <td>+50000₽</td>
+                            <td>Альфабанк (основной)</td>
+                            <td>13.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Подарок</td>
+                            <td>+9000₽</td>
+                            <td>Альфабанк (основной)</td>
+                            <td>12.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Продукты</td>
+                            <td>-456₽</td>
+                            <td>Сбербанк (основной)</td>
+                            <td>12.09.2022</td>
+                        </tr>
                       </table>
+                </div>
+
+                <div class="graph-expense">
+                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+
+                    <script>
+                    var xValues = ["Продукты", "Рестораны", "Бытовые", "Коммунальные", "Услуги красоты"];
+                    var yValues = [5200, 701, 4456, 2400, 1500];
+                    var barColors = [
+                      "#b91d47",
+                      "#00aba9",
+                      "#2b5797",
+                      "#e8c3b9",
+                      "#1e7145"
+                    ];
+                    
+                    new Chart("myChart", {
+                      type: "pie",
+                      data: {
+                        labels: xValues,
+                        datasets: [{
+                          backgroundColor: barColors,
+                          data: yValues
+                        }]
+                      },
+                      options: {
+                        legend: {
+                            position: 'right',
+                        }
+                    }
+                    });
+                    </script>         
                 </div>
 
 

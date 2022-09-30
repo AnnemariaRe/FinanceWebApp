@@ -13,8 +13,8 @@ main {
     width: 14%;
     background-color: #dad7cd;
     position: fixed;
-    height: 100%;
-    margin-bottom: -5%;
+    height: 110%;
+    margin-top: -1%;
 }
 
 .menu-bar a {
@@ -37,11 +37,11 @@ main {
 }
 
 footer {
-    width: 85%;
+    margin-top: 15%;
+    bottom: 0;
+    width: 100%;
     background-color: #dad7cd;
     color: #344e41;
-    margin-top: 20%;
-    margin-left: 14%;
     padding: 0.2%;
     text-align: center;
 }
@@ -56,3 +56,8 @@ footer {
 .footer-bar a:hover {
     color: #FCFCFC;
 }
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
