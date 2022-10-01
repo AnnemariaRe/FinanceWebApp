@@ -1,14 +1,9 @@
-.first-block {
-    display: table;
-    width: 1250px;
-}
-
-.second-block {
+.first-block, .second-block, .third-block, .history-block {
     display: flex;
 }
 
 .balance-item {
-    width: 320px;
+    width: 100%;
     background-color: #C5CEB6;
     color: #344e41;
     padding: 0px 20px;
@@ -21,22 +16,24 @@
 }
 
 .balance-all {
-    width: 500px;
+    width: 40%;
     display: table;
+    margin-right: 10%;
 }
 
 .graph-expense h3 {
-    padding-right: 60px;
+    padding-right: 30%;
     margin: 5px;
     text-align: center;
 }
 
-.third-block {
-    display: flex;
+.graphs {
+    display: table;
+    width: 35%;
 }
 
 .history {
-    width: 700px;
+    width: 60%;
     background-color: #F9F7F0;
     margin-left: 40px;
     margin-top: 20px;
@@ -45,12 +42,7 @@
 
 .history-list table {
     border-collapse: collapse;
-    width: 700px;
-}
-
-.accounts-body table {
-    border-collapse: collapse;
-    width: 1238px;
+    width: 100%;
 }
 
 table td, table th {
@@ -77,12 +69,12 @@ table {
 
 .month-balance-all {
     margin-top: 0px;
-    width: 400px;
+    width: 40%;
     display: table;
 }
 
 .month-balance-item {
-    width: 310px;
+    width: 80%;
     background-color: #C5CEB6;
     color: #344e41;
     padding: 10px 25px;
@@ -98,19 +90,29 @@ table {
     display: flex;
 }
 
+.graphs {
+    width: 40%;
+}
+
 .history-list {
-    width: 700px;
+    width: 60%;
     background-color: #F9F7F0;
     margin: 20px;
 }
 
-.graphs {
-    width: 300px;
-    display: table;
+.account-block {
+    display: flex;
+    margin-left: 2%;
 }
 
 .accounts {
-    margin-left: 20px;
+    display: table;
+    width: 100%;
+}
+
+.accounts-body table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .accounts-header {
@@ -149,23 +151,10 @@ table {
 }
 
 .exchange {
-    width: 250px;
-    margin-left: 110px;
+    width: 40%;
+    margin-left: 30%;
     margin-top: 20px;
-}
-
-.exchange h3 {
-    background-color:#3e5c4d;
-    color: whitesmoke;
-    padding: 15px;
-    margin: 0;
-}
-
-.body {
-    margin: 0;
-    padding: 5px;
-    background-color:#3e5c4d;
-    color: #344e41;
+    padding: 5px 20px;
 }
 
 .main {
@@ -174,7 +163,11 @@ table {
 
 .exchange-table td {
     background-color: #fdfbf5;
-    width: 185px;
+}
+
+.exchange-table th {
+    background-color:#3e5c4d;
+    color: whitesmoke;
     padding: 15px;
 }
 

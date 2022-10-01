@@ -1,13 +1,12 @@
 .graph-expense {
-    width: 600px;
+    width: 70%;
     padding: 20px;
     margin-bottom: 20px;
 }
 
 .graph {
-    width: 480px;
+    width: 80%;
     padding: 4px;
-    margin-bottom: 40px;
 }
 
 img {
