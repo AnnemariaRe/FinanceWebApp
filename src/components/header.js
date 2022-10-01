@@ -6,7 +6,7 @@ class Header extends HTMLElement {
     connectedCallback() {
       var path = window.location.pathname;
       var page = path.split("/").pop();
-      
+
       if (page == "index.html") {
         this.innerHTML = `
         <header>
@@ -33,8 +33,6 @@ class Header extends HTMLElement {
         </header>
       `;
       }
-
-      
     }
   }
   
