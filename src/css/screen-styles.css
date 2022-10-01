@@ -1,0 +1,59 @@
+@media screen and (max-width: 1105px) {
+    .graph-expense {
+        display: none;
+    }
+
+    .accounts {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .month-balance-all {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1441px) {
+    .month-balance-all {
+        display:block;
+    }
+}
+
+@media screen and (min-width: 1106px) {
+    .balance-item { 
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 1106px) and (min-width: 980px) {
+    .balance-item {
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 980px) {
+    .month-balance-item {
+        margin-left: 5px;
+    }
+
+    .exchange {
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 1239px) {
+    .graph {
+        display: none;
+    }
+
+    .first-block a {
+        display:block;
+        width: 50%;
+    }
+
+    .history-list {
+        width: 700px;
+    }
+}
