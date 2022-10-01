@@ -4,13 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <title>WalletKeeper</title>
-    <script src="../components/header.js" type="text/javascript" defer></script> 
+
+    <link href="../css/form-styles.css" rel="stylesheet">
+    <link href="../css/img-styles.css" rel="stylesheet">
+    <link href="../css/layout-styles.css" rel="stylesheet">
+    <link href="../css/module-styles.css" rel="stylesheet">
+    <script src="../components/header.js" type="text/javascript" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header-component></header-component>
     <main>
         <div class="content">
+            <section class="block">
+                <div class="accounts">
+                    <div class="accounts-header">
+                        <h3>Счета</h3>
+                        <a href="#" class="button">
+                            <i class="fa fa-plus"></i>
+                            Добавить счет
+                        </a>
+                    </div>
+
+                    <div class="accounts-body">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="icon">
+                                        <i class="fa fa-credit-card"></i>
+                                    </div></td>
+                                <td>Сбербанк <br> <span>Название</span></td>
+                                <td>46021 <br> <span>Количество</span></td>
+                                <td>Российский рубль <br> <span>Валюта</span></td>
+                                <td>
+                                    <div class="active">
+                                        <i class="fa fa-circle"></i> Активный
+                                    </div></td>
+                                <td>Основной <br> <span>Тип счета</span></td>
+                                <td>
+                                    <a href="#" class="button">
+                                        <i class="fa fa-edit"></i>
+                                    </a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="icon">
+                                        <i class="fa fa-bank"></i>
+                                    </div></td>
+                                <td>Сбербанк <br> <span>Название</span></td>
+                                <td>134000 <br> <span>Количество</span></td>
+                                <td>Российский рубль <br> <span>Валюта</span></td>
+                                <td>
+                                    <div class="active">
+                                        <i class="fa fa-circle"></i> Активный
+                                    </div></td>
+                                <td>Сберегательный <br> <span>Тип счета</span></td>
+                                <td>
+                                    <a href="#" class="button">
+                                        <i class="fa fa-edit"></i>
+                                    </a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="icon">
+                                        <i class="fa fa-credit-card"></i>
+                                    </div></td>
+                                <td>Альфабанк <br> <span>Название</span></td>
+                                <td>15000 <br> <span>Количество</span></td>
+                                <td>Российский рубль <br> <span>Валюта</span></td>
+                                <td>
+                                    <div class="active">
+                                        <i class="fa fa-circle"></i> Активный
+                                    </div></td>
+                                <td>Зарплатный <br> <span>Тип счета</span></td>
+                                <td>
+                                    <a href="#" class="button">
+                                        <i class="fa fa-edit"></i>
+                                    </a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="icon">
+                                        <i class="fa fa-credit-card"></i>
+                                    </div></td>
+                                <td>Альфабанк <br> <span>Название</span></td>
+                                <td>1600 <br> <span>Количество</span></td>
+                                <td>Евро <br> <span>Валюта</span></td>
+                                <td>
+                                    <div class="unactive">
+                                        <i class="fa fa-circle"></i> Неактивный
+                                    </div></td>
+                                <td>Основной <br> <span>Тип счета</span></td>
+                                <td>
+                                    <a href="#" class="button">
+                                        <i class="fa fa-edit"></i>
+                                    </a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="icon">
+                                        <i class="fa fa-money"></i>
+                                    </div></td>
+                                <td>Наличные <br> <span>Название</span></td>
+                                <td>10560 <br> <span>Количество</span></td>
+                                <td>Российский рубль <br> <span>Валюта</span></td>
+                                <td>
+                                    <div class="active">
+                                        <i class="fa fa-circle"></i> Активный
+                                    </div></td>
+                                <td>Основной <br> <span>Тип счета</span></td>
+                                <td>
+                                    <a href="#" class="button">
+                                        <i class="fa fa-edit"></i>
+                                    </a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+            </section>
             
 
 

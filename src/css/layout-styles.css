@@ -46,9 +46,9 @@ h3 {
 }
 
 footer {
-    position:relative;
+    position: relative;
     z-index: 1;
-    margin-top: 15%;
+    margin-top: 10%;
     bottom: 0;
     width: 12%;
     background-color: #dad7cd;

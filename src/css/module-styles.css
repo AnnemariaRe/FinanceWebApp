@@ -1,5 +1,4 @@
 .first-block {
-    margin-top: -1%;
     display: flex;
 }
 
@@ -17,6 +16,7 @@
     display: inline-block;
     margin: 5% 8%;
     font-size: 21px;
+    border-radius: 6px;
 }
 
 .balance-all {
@@ -31,7 +31,7 @@
 
 .history {
     width: 60%;
-    background-color: #DAD7CD;
+    background-color: #F9F7F0;
     margin-left: 3%;
     margin-top: 2%;
     margin-bottom: 0%;
@@ -52,7 +52,9 @@ table th {
   color: white;
 }
 
-table tr:nth-child(even){background-color: #ECE8DD;}
+table tr:nth-child(even) {
+    background-color: #f1eee5;
+}
 
 .month-balance-all {
     margin-top: 0.3%;
@@ -70,6 +72,7 @@ table tr:nth-child(even){background-color: #ECE8DD;}
     display: inline-block;
     font-size: 20px;
     margin: 5% 13%;
+    border-radius: 8px;
 }
 
 .history-block {
@@ -78,11 +81,55 @@ table tr:nth-child(even){background-color: #ECE8DD;}
 
 .history-list {
     width: 75%;
-    background-color: #DAD7CD;
+    background-color: #F9F7F0;
     margin: 2% 2% 2% 2%;
 }
 
 .graphs {
     width: 50%;
     display: table;
+}
+
+.accounts {
+    display: table;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.accounts-header {
+    background-color: #6F8C6E;
+    padding: 25px;
+}
+
+.accounts-header h3 {
+    color: white;
+    margin: 0;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: left;
+}
+
+.accounts-body {
+    background-color: #F9F7F0;
+    line-height: 20px;
+}
+
+.accounts-body table td span {
+    color: #C2C2C2;
+    font-weight: 400;
+}
+
+.accounts-body table td {
+    font-weight: bold;
+    padding: 15px;
+}
+
+.accounts-body table tr {
+    display: table-row;
+    vertical-align: middle;
+    border-color: transparent;
+}
+
+.accounts-body table {
 }
