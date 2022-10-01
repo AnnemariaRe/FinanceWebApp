@@ -1,5 +1,6 @@
 .first-block {
-    display: flex;
+    display: table;
+    width: 1250px;
 }
 
 .second-block {
@@ -7,7 +8,7 @@
 }
 
 .balance-item {
-    width: 70%;
+    width: 320px;
     background-color: #C5CEB6;
     color: #344e41;
     padding: 0px 20px;
@@ -35,46 +36,58 @@
 }
 
 .history {
-    width: 750px;
+    width: 700px;
     background-color: #F9F7F0;
     margin-left: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+.history-list table {
+    border-collapse: collapse;
+    width: 700px;
+}
+
+.accounts-body table {
+    border-collapse: collapse;
+    width: 1238px;
 }
 
 table td, table th {
-  padding: 25px;
+    padding: 25px;
 }
 
 table th {
-  text-align: left;
-  background-color: #3e5c4d;
-  color: white;
+    text-align: left;
+    background-color: #3e5c4d;
+    color: white;
 }
 
-table tr:nth-child(even) {
+table {
+    border-collapse: collapse;
+}
+
+.accounts-body table tr:nth-child(even) {
+    background-color: #f1eee5;
+}
+
+.history-list table tr:nth-child(even) {
     background-color: #f1eee5;
 }
 
 .month-balance-all {
     margin-top: 0px;
-    width: 430px;
+    width: 400px;
     display: table;
 }
 
 .month-balance-item {
-    width: 330px;
+    width: 310px;
     background-color: #C5CEB6;
     color: #344e41;
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 20px;
     margin: 20px 40px;
     margin-left: 60px;
@@ -86,20 +99,18 @@ table tr:nth-child(even) {
 }
 
 .history-list {
-    width: 850px;
+    width: 700px;
     background-color: #F9F7F0;
     margin: 20px;
 }
 
 .graphs {
-    width: 550px;
+    width: 300px;
     display: table;
 }
 
 .accounts {
-    display: table;
-    width: 100%;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .accounts-header {
@@ -135,4 +146,38 @@ table tr:nth-child(even) {
     display: table-row;
     vertical-align: middle;
     border-color: transparent;
+}
+
+.exchange {
+    width: 250px;
+    margin-left: 110px;
+    margin-top: 20px;
+}
+
+.exchange h3 {
+    background-color:#3e5c4d;
+    color: whitesmoke;
+    padding: 15px;
+    margin: 0;
+}
+
+.body {
+    margin: 0;
+    padding: 5px;
+    background-color:#3e5c4d;
+    color: #344e41;
+}
+
+.main {
+    background-color:#C5CEB6;
+}
+
+.exchange-table td {
+    background-color: #fdfbf5;
+    width: 185px;
+    padding: 15px;
+}
+
+.exchange table td:nth-child(even) {
+    background-color: #f1eee5;
 }
