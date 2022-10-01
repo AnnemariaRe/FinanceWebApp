@@ -1,14 +1,14 @@
 .first-block a {
-    width: 11%;
-    background-color: #344e41;
+    width: 140px;
+    background-color: #3e5c4d;
     color: whitesmoke;
     padding: 10px;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    margin: 5% 2%;
+    margin: 60px 35px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 .first-block a:hover {
@@ -30,5 +30,5 @@
     text-decoration: none;
     cursor: pointer;
     float: right;
-    border-radius: 6px;
+    border-radius: 5px;
 }

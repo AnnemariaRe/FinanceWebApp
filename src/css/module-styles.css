@@ -10,31 +10,36 @@
     width: 70%;
     background-color: #C5CEB6;
     color: #344e41;
-    padding: 0% 5%;
+    padding: 0px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 5% 8%;
+    margin: 20px 40px;
     font-size: 21px;
     border-radius: 6px;
 }
 
 .balance-all {
-    width: 40%;
+    width: 500px;
     display: table;
 }
 
+.graph-expense h3 {
+    padding-right: 60px;
+    margin: 5px;
+    text-align: center;
+}
 
 .third-block {
     display: flex;
 }
 
 .history {
-    width: 60%;
+    width: 750px;
     background-color: #F9F7F0;
-    margin-left: 3%;
-    margin-top: 2%;
-    margin-bottom: 0%;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 table {
@@ -43,12 +48,12 @@ table {
 }
 
 table td, table th {
-  padding: 3%;
+  padding: 25px;
 }
 
 table th {
   text-align: left;
-  background-color: #344e41;
+  background-color: #3e5c4d;
   color: white;
 }
 
@@ -57,22 +62,23 @@ table tr:nth-child(even) {
 }
 
 .month-balance-all {
-    margin-top: 0.3%;
-    width: 35%;
+    margin-top: 0px;
+    width: 430px;
     display: table;
 }
 
 .month-balance-item {
-    width: 75%;
+    width: 330px;
     background-color: #C5CEB6;
     color: #344e41;
-    padding: 1% 6%;
+    padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: 5% 13%;
-    border-radius: 8px;
+    margin: 20px 40px;
+    margin-left: 60px;
+    border-radius: 5px;
 }
 
 .history-block {
@@ -80,13 +86,13 @@ table tr:nth-child(even) {
 }
 
 .history-list {
-    width: 75%;
+    width: 850px;
     background-color: #F9F7F0;
-    margin: 2% 2% 2% 2%;
+    margin: 20px;
 }
 
 .graphs {
-    width: 50%;
+    width: 550px;
     display: table;
 }
 
@@ -129,7 +135,4 @@ table tr:nth-child(even) {
     display: table-row;
     vertical-align: middle;
     border-color: transparent;
-}
-
-.accounts-body table {
 }
