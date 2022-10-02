@@ -152,7 +152,7 @@ table {
 
 .exchange {
     width: 40%;
-    margin-left: 30%;
+    margin-left: 20%;
     margin-top: 20px;
     padding: 15px;
 }
@@ -165,6 +165,11 @@ table {
     background-color:#3e5c4d;
     color: whitesmoke;
     padding: 15px;
+    text-align: center;
+}
+
+.exchange-table td {
+    padding: 10px 50px;
 }
 
 .exchange table td:nth-child(even) {
