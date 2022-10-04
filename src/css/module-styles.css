@@ -1,0 +1,176 @@
+.first-block, .second-block, .third-block, .history-block {
+    display: flex;
+}
+
+.balance-item {
+    width: 100%;
+    background-color: #C5CEB6;
+    color: #344e41;
+    padding: 0px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 30px;
+    font-size: 21px;
+    border-radius: 6px;
+}
+
+.balance-all {
+    width: 50%;
+    display: table;
+    margin-right: -5%;
+}
+
+.graph-expense h3 {
+    margin: 5px;
+    text-align: center;
+}
+
+.graphs {
+    display: table;
+    width: 40%;
+}
+
+.history {
+    width: 60%;
+    background-color: #F9F7F0;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.history-list table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    padding: 25px;
+}
+
+table th {
+    text-align: left;
+    background-color: #3e5c4d;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.accounts-body table tr:nth-child(even) {
+    background-color: #f1eee5;
+}
+
+.history-list table tr:nth-child(even) {
+    background-color: #f1eee5;
+}
+
+.month-balance-all {
+    margin-top: 0px;
+    width: 40%;
+    display: table;
+}
+
+.month-balance-item {
+    width: 70%;
+    background-color: #C5CEB6;
+    color: #344e41;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 5% 15%;
+    margin-left: 60px;
+    border-radius: 5px;
+}
+
+.history-block {
+    display: flex;
+}
+
+.graphs {
+    width: 40%;
+}
+
+.history-list {
+    width: 60%;
+    background-color: #F9F7F0;
+    margin: 20px;
+}
+
+.account-block {
+    display: flex;
+    margin-left: 2%;
+}
+
+.accounts {
+    display: table;
+    width: 100%;
+}
+
+.accounts-body table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.accounts-header {
+    background-color: #6F8C6E;
+    padding: 25px;
+}
+
+.accounts-header h3 {
+    color: white;
+    margin: 0;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: left;
+}
+
+.accounts-body {
+    background-color: #F9F7F0;
+    line-height: 20px;
+}
+
+.accounts-body table td span {
+    color: #C2C2C2;
+    font-weight: 400;
+}
+
+.accounts-body table td {
+    font-weight: bold;
+    padding: 15px;
+}
+
+.accounts-body table tr {
+    display: table-row;
+    vertical-align: middle;
+    border-color: transparent;
+}
+
+.exchange {
+    width: 40%;
+    margin-left: 20%;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.exchange-table td {
+    background-color: #fdfbf5;
+}
+
+.exchange-table th {
+    background-color:#3e5c4d;
+    color: whitesmoke;
+    padding: 15px;
+    text-align: center;
+}
+
+.exchange-table td {
+    padding: 10px 50px;
+}
+
+.exchange table td:nth-child(even) {
+    background-color: #f1eee5;
+}

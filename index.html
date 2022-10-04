@@ -5,22 +5,29 @@
     <meta charset="UTF-8">
     <title>WalletKeeper</title>
     
-    <link href="src/css/style.css" rel="stylesheet">
+    <link href="src/css/form-styles.css" rel="stylesheet">
+    <link href="src/css/img-styles.css" rel="stylesheet">
+    <link href="src/css/layout-styles.css" rel="stylesheet">
+    <link href="src/css/module-styles.css" rel="stylesheet">
+    <link href="src/css/screen-styles.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="src/components/header.js" type="text/javascript" defer></script>
+    <script src="src/components/footer.js" type="text/javascript" defer></script>
+    <script src="src/components/page-load.js" type="text/javascript"></script>  
 </head>
 
-<body bgcolor="#FCFCFC">
+<body>
     <header-component></header-component>
     <main>
         <div class="content">
             <section class="first-block">
                 <div class="heading">
-                    <h1>Добро пожаловать, друг!!!</h1>
+                    <h1>Добро пожаловать, Аннемария!</h1>
                     <p>Ты находишься на главной странице приложения. Тут расположены актуальные данные по твоим финансам.</p>
                 </div>
-                <a href="#" class="button">
+                <div class="buttons">
+                    <a href="#" class="button">
                     <i class="fa fa-minus"></i>
                     снять
                 </a>
@@ -29,23 +36,26 @@
                     <i class="fa fa-plus"></i>
                     положить
                 </a>
+                </div>
+                
             </section>
 
             <section class="second-block">
                 <section class="balance-all">
                     <div class="balance-item">
-                        <h4>Всего средств: 124000 ₽</h4>
+                        <h4>Всего средств: 124,000 ₽</h4>
                     </div>
                     <div class="balance-item">
-                        <h4>Доступно сейчас: 68000 ₽</h4> 
+                        <h4>Доступно сейчас: 68,000 ₽</h4> 
                     </div>
                     <div class="balance-item">
-                        <h4>Сбережения: 56000 ₽</h4>
+                        <h4>Сбережения: 56,000 ₽</h4>
                     </div>
                 </section>
             
                 <section class="graph-expense">
-                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                    <h3>Траты за неделю</h3>
+                    <canvas id="myChart" style="width:100%;max-width:650px"></canvas>
 
                     <script>
                     var xValues = ["1", "2", "3", "4", "5", "6", "7"];
@@ -63,25 +73,64 @@
                     },
                     options: {
                         legend: {display: false},
-                        title: {
-                        display: true,
-                        text: "Траты за неделю"
-                        }
                     }
                     });
-                    </script>
+                    </script>                    
                 </section>
             </section>
             
             <section class="third-block">
-                <div class="history">
-                    <ul class="menu-list">
-                        <li>Продукты  <b>-1067₽</b>  Сбербанк (основной)  18.09.2022</li>
-                        <li>Продукты  <b>-765₽</b>  Сбербанк (основной)  17.09.2022</li>
-                        <li>Одежда  <b>-4091₽</b>  Наличные 16.09.2022</li>
-                        <li>Зарплата  <b>+50000₽</b>  Альфабанк (основной)  16.09.2022</li>
-                        <li>Бытовые покупки  <b>-3409₽</b>  Сбербанк (основной)  13.09.2022</li>
-                    </ul>
+                <div class="history-list">
+                    <table>
+                        <tr>
+                            <th>Категория</th>
+                            <th>Количество</th>
+                            <th>Счет</th>
+                            <th>Дата</th>
+                        </tr>
+                        <tr>
+                            <td>Продукты</td>
+                            <td>-1,067₽</td>
+                            <td>Сбербанк (основной)</td>
+                            <td>18.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Продукты</td>
+                            <td>-765₽</td>
+                            <td>Сбербанк (основной)</td>
+                            <td>17.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Одежда</td>
+                            <td>-4,091₽</td>
+                            <td>Наличные</td>
+                            <td>16.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Бытовые покупки</td>
+                            <td>-3,409₽</td>
+                            <td>Сбербанк (основной)</td>
+                            <td>16.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Зарплата</td>
+                            <td>+50,000₽</td>
+                            <td>Альфабанк (основной)</td>
+                            <td>13.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Подарок</td>
+                            <td>+9,000₽</td>
+                            <td>Альфабанк (основной)</td>
+                            <td>12.09.2022</td>
+                        </tr>
+                        <tr>
+                            <td>Продукты</td>
+                            <td>-456₽</td>
+                            <td>Сбербанк (основной)</td>
+                            <td>12.09.2022</td>
+                        </tr>
+                      </table>
                 </div>
 
                 <section class="month-balance-all">
@@ -91,16 +140,40 @@
                     <div class="month-balance-item">
                         <h4>доход за месяц: 50000 ₽</h4>
                     </div>
+
+                    <div class="exchange">
+                        <table class="exchange-table">
+                            <tr>
+                                <th>Курс</th>
+                                <th>Валют</th>
+                            </tr>
+                            <tr>
+                                <td>RUB</td>
+                                <td><b>Основная</b></td>
+                            </tr>
+                            <tr>
+                                <td>USD</td>
+                                <td><b>60.20</b></td>
+                            </tr>
+                            <tr>
+                                <td>EUR</td>
+                                <td><b>59.00</b></td>
+                            </tr>
+                            <tr>
+                                <td>UAH</td>
+                                <td><b>1.62</b></td>
+                            </tr>
+                            <tr>
+                                <td>KZT</td>
+                                <td><b>0.12</b></td>
+                            </tr>
+                        </table>        
+                    </div>
                 </section>
             </section>
         </div>
-          
     </main>
-    <footer>
-        <div class="footer-bar">
-            <p><a href="https://t.me/annmarry05">@annmarry05</a></p>
-        </div>
-    </footer>
+    <footer-component></footer-component>   
 </body>
 </html>
 
