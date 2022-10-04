@@ -10,26 +10,25 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 20px 40px;
+    margin: 20px 30px;
     font-size: 21px;
     border-radius: 6px;
 }
 
 .balance-all {
-    width: 40%;
+    width: 50%;
     display: table;
-    margin-right: 10%;
+    margin-right: -5%;
 }
 
 .graph-expense h3 {
-    padding-right: 30%;
     margin: 5px;
     text-align: center;
 }
 
 .graphs {
     display: table;
-    width: 35%;
+    width: 40%;
 }
 
 .history {
