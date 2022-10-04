@@ -11,11 +11,11 @@ class Header extends HTMLElement {
         this.innerHTML = `
         <header>
         <div class="menu-bar">
-            <img src="src/img/calculator.png" width="120px" height="120px"/>
+            <img src="./src/img/calculator.png" width="120px" height="120px"/>
             <nav class="menu-nav">
-                <a href="index.html">Главная</a>
-                <a href="src/pages/wallet.html">Кошелек</a>
-                <a href="src/pages/history.html">История</a>
+                <a href="#">Главная</a>
+                <a href="./src/pages/wallet.html">Кошелек</a>
+                <a href="./src/pages/history.html">История</a>
             </nav>
         </div>
         </header>
@@ -23,11 +23,11 @@ class Header extends HTMLElement {
         this.innerHTML = `
         <header>
         <div class="menu-bar">
-            <img src="../img/calculator.png" width="120px" height="120px"/>
+            <img src="./../img/calculator.png" width="120px" height="120px"/>
             <nav class="menu-nav">
-                <a href="../../index.html">Главная</a>
-                <a href="../pages/wallet.html">Кошелек</a>
-                <a href="../pages/history.html">История</a>
+                <a href="./../../index.html">Главная</a>
+                <a href="./../pages/wallet.html">Кошелек</a>
+                <a href="./../pages/history.html">История</a>
             </nav>
         </div>
         </header>
