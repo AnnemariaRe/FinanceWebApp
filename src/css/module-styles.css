@@ -2,12 +2,14 @@
     overflow: hidden;
     margin-top: 20px;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .first-block {
     border: 2px solid #F5F5F5;
     background-color: white;
     width: 97%;
+    position: relative;
 }
 
 .balance-item {
@@ -79,6 +81,7 @@ table {
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
+    display: inline-block;
     font-size: 20px;
     margin: 5% 15%;
     border-radius: 5px;
