@@ -19,11 +19,19 @@
 <body>
     <header>
         <div class="menu-bar">
-            <img src="./src/img/calculator.png" width="120px" height="120px"/>
             <nav class="menu-nav">
-                <a href="./index.html">Главная</a>
-                <a href="./src/pages/wallet.html">Кошелек</a>
-                <a href="./src/pages/history.html">История</a>
+                <a href="./index.html">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Главная</span>
+                </a>
+                <a href="./src/pages/wallet.html">
+                    <span class="icon"><i class="fa fa-tasks" aria-hidden="true"></i></span>
+                    <span class="title">Кошелек</span>
+                </a>
+                <a href="./src/pages/history.html">
+                    <span class="icon"><i class="fa fa-history" aria-hidden="true"></i></span>
+                    <span class="title">История</span>
+                </a>
             </nav>
         </div>
         </header>
@@ -31,19 +39,18 @@
         <div class="content">
             <section class="first-block">
                 <div class="heading">
-                    <h1>Добро пожаловать, Аннемария!</h1>
-                    <p>Ты находишься на главной странице приложения. Тут расположены актуальные данные по твоим финансам.</p>
+                    <h1>WalletKeeper</h1>
                 </div>
                 <div class="buttons">
                     <a href="#" class="button">
                     <i class="fa fa-minus"></i>
                     снять
-                </a>
+                    </a>
 
-                <a href="#" class="button">
+                    <a href="#" class="button">
                     <i class="fa fa-plus"></i>
                     положить
-                </a>
+                    </a>
                 </div>
                 
             </section>
@@ -68,7 +75,7 @@
                     <script>
                     var xValues = ["1", "2", "3", "4", "5", "6", "7"];
                     var yValues = [750, 490, 640, 840, 750, 1200, 480];
-                    var barColors = ["grey","grey","grey","grey","grey","grey","grey"];
+                    var barColors = ["#C5CEB6","#C5CEB6","#C5CEB6","#C5CEB6","#C5CEB6","#C5CEB6","#C5CEB6"];
 
                     new Chart("myChart", {
                     type: "bar",

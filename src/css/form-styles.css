@@ -1,20 +1,20 @@
 .first-block a {
-    width: 14%;
     background-color: #344e41;
     color: whitesmoke;
-    padding: 12px;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    margin: 2% 1%;
-    margin-left: 10%;
+    padding: 10px 20px;
+    margin: 10px 20px;
     cursor: pointer;
     border-radius: 6px;
 }
 
 .buttons {
     width: 40%;
-    margin-top: 50px;
+    float: right;
+    margin-top: -65px;
+    margin-right: -130px;
 }
 
 .first-block a:hover {

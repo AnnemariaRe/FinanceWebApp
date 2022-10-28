@@ -1,43 +1,301 @@
-@media screen and (max-width: 1105px) {
-    .graph-expense {
-        display: none;
-    }
-
-    .accounts {
-        width: 500px;
-    }
-    
-    .month-balance-all {
-        display: none;
+@media screen and (max-width: 1630px) {
+    .content {
+        padding-left: 0px;
+        padding-right: 20px;
     }
 }
 
-@media screen and (max-width: 1441px) and (min-width: 1105px) {
-    .month-balance-all {
-        display: block;
-    }
-}
-
-@media screen and (min-width: 1106px) {
-    .balance-item { 
-        width: 60%;
-    }
-
-}
-
-@media screen and (max-width: 1106px) and (min-width: 980px) {
-    .balance-item {
-        width: 650px;
-    }
-}
-
-@media screen and (max-width: 1250px) and (min-width: 980px) {
-    .month-balance-item {
-        margin-left: 5px;
+@media screen and (max-width: 1560px) {
+    .content {
+        width: 1300px;
     }
 
     .exchange {
+        margin-left: 75px;
+    }
+}
+
+@media screen and (max-width: 1490px) {
+    .content {
+        width: 1200px;
+    }
+
+    .first-block a {
+        margin: 10px 10px;
+    }
+
+    .exchange {
+        margin-left: 60px;
+    }
+
+    .graph-expense {
+        margin-top: -350px;
+    }
+}
+
+@media screen and (max-width: 1390px) {
+    .content {
+        width: 1150px;
+    }
+
+    .first-block a {
+        margin: 10px 30px;
+        margin-left: -10px;
+    }
+
+    .exchange {
+        margin-left: 50px;
+    }
+
+    .graph-expense {
+        margin-top: -340px;
+    }
+
+    .month-balance-all {
+        margin-top: -620px;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    .content {
+        width: 1100px;
+    }
+
+    .first-block a {
+        margin: 10px 10px;
+    }
+
+    .buttons {
+        margin-right: -80px;
+    }
+
+    .exchange {
+        margin-left: 43px;
+    }
+
+    .month-balance-all {
+        margin-top: -670px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .content {
+        width: 1000px;
+    }
+
+    .first-block a {
+        margin: 10px 6px;
+    }
+
+    .buttons {
+        margin-right: -50px;
+    }
+
+    .graph-expense {
+        margin-top: -320px;
+    }
+
+    .exchange {
+        margin-left: 35px;
+    }
+
+    .month-balance-item {
+        width: 65%;
+    }
+
+    .month-balance-all {
+        margin-top: -670px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        width: 900px;
+    }
+
+    .first-block a {
+        margin: 10px 10px;
+    }
+
+    .buttons {
+        margin-right: 0px;
+        width: 40%;
+    }
+
+    .balance-all {
+        width: 55%;
         margin-left: 5px;
+    }
+
+    .balance-item {
+        padding: 0px 10px;
+        margin: 10px 30px;
+        font-size: 21px;
+        border-radius: 6px;
+    }
+
+    .graph-expense {
+        margin-top: -280px;
+    }
+
+    .month-balance-all {
+        margin-top: -670px;
+        margin-left: 20px;
+    }
+
+    table td, table th {
+        padding: 25px 20px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .content {
+        width: 800px;
+    }
+
+    .buttons {
+        margin-right: 20px;
+    }
+
+    .balance-item {
+        width: 80%;
+        margin: 10px 40px;
+    }
+    
+    .balance-all {
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    .graph-expense {
+        width: 90%;
+        margin-right: 20px;
+        margin-top: 25px;
+    }
+
+    .graph-expense h3 {
+        margin: 5px;
+        margin-right: 50px;
+        text-align: center;
+    }
+
+    .month-balance-all {
+        width: 95%;
+        display: table;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    
+    .month-balance-item {
+        width: 90%;
+        margin: 15px 0px;
+        border-radius: 5px;
+    }
+    
+    .exchange {
+        width: 100%;
+        margin-left: 120px;
+    }
+    
+    .exchange-table td {
+        padding: 10px 80px;
+    }
+
+    .history-list {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1015px) { 
+    .icon {
+        position: relative;
+        font-size: 25px;
+    }
+
+    .menu-nav {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 1015px) { 
+    main {
+        padding-left: 100px;
+        padding-right: 25px;
+    }
+
+    .first-block {
+        width: 98%;
+        margin-left: 15px;
+    }
+
+    .balance-all {
+        width: 100%;
+        margin-left: 30px;
+        display: table;
+    }
+
+    .menu-bar {   
+        margin-left: -10px; 
+        width: 90px;
+    }
+
+    .menu-nav {
+        margin-top: 30px;
+    }
+
+    .menu-bar a {
+        padding: 20px 25px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #16241e;
+        display: block;
+    }
+
+    .menu-nav .title {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 925px) { 
+    main {
+        padding-left: 70px;
+    }
+
+    .heading {
+        margin-left: 30px;
+    }
+
+    .history-list {
+        width: 95%;
+        margin-left: 30px;
+    }
+
+}
+/*
+
+
+/* @media screen and (max-width: 1106px) and (min-width: 980px) {
+    .balance-item {
+        width: 650px;
+    }
+} */
+/*
+@media screen and (max-width: 1250px) and (min-width: 980px) {
+    .month-balance-item {
+        margin-left: 10px;
+    }
+
+    .exchange {
+        margin-left: 0;
     }
 }
 
@@ -54,4 +312,4 @@
     .history-list {
         width: 700px;
     }
-}
+} */

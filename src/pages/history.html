@@ -13,16 +13,25 @@
     <script src="../components/footer.js" type="text/javascript" defer></script>
     <script src="../components/page-load.js" type="text/javascript"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <div class="menu-bar">
-            <img src="./../img/calculator.png" width="120px" height="120px"/>
             <nav class="menu-nav">
-                <a href="./../../index.html">Главная</a>
-                <a href="./../pages/wallet.html">Кошелек</a>
-                <a href="./../pages/history.html">История</a>
+                <a href="./../../index.html">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Главная</span>
+                </a>
+                <a href="./../pages/wallet.html">
+                    <span class="icon"><i class="fa fa-tasks" aria-hidden="true"></i></span>
+                    <span class="title">Кошелек</span>
+                </a>
+                <a href="./../pages/history.html">
+                    <span class="icon"><i class="fa fa-history" aria-hidden="true"></i></span>
+                    <span class="title">История</span>
+                </a>
             </nav>
         </div>
         </header>
@@ -30,7 +39,7 @@
         <div class="content">
 
             <section class="history-block">
-                <div class="history-list">
+                <div class="history">
                     <table>
                         <tr>
                             <th>Категория</th>
