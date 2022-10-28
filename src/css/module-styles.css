@@ -32,11 +32,6 @@
     display: table;
 }
 
-.graphs {
-    display: table;
-    width: 40%;
-}
-
 .history-list table {
     border-collapse: collapse;
     width: 100%;
@@ -99,8 +94,13 @@ table {
 .graphs {
     width: 42%;
     float: right;
+    display: table;
     margin-top: -1000px;
-    margin-left: 60px;
+    margin-right: -10px;
+}
+
+.graph {
+    margin: 40px 5px;
 }
 
 .history {

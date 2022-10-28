@@ -54,6 +54,10 @@
     .month-balance-all {
         margin-top: -620px;
     }
+
+    .graphs {
+        margin-top: -1100px;
+    }
 }
 
 @media screen and (max-width: 1330px) {
@@ -75,6 +79,10 @@
 
     .month-balance-all {
         margin-top: -670px;
+    }
+
+    .graphs {
+        margin-top: -1200px;
     }
 }
 
@@ -105,6 +113,10 @@
 
     .month-balance-all {
         margin-top: -670px;
+    }
+
+    .graphs {
+        width: 40%;
     }
 }
 
@@ -203,6 +215,18 @@
 
     .history-list {
         width: 100%;
+    }
+
+    .graphs {
+        width: 100%;
+        float: none;
+        display: flex;
+        margin-top: 0px;
+        margin-right: -10px;
+    }
+
+    .graph {
+        width: 50%;
     }
 }
 
@@ -323,6 +347,11 @@
     .third-block {
         width: 100%;
     }
+
+    .graphs {
+        width: 90%;
+        margin-left: 10px;
+    }
 }
 @media screen and (max-width: 787px) { 
     .buttons {
@@ -330,6 +359,10 @@
     }
     .exchange {
         margin-left: 5%;
+    }
+
+    .graphs {
+        width: 90%;
     }
 }
 
@@ -358,9 +391,18 @@
     .exchange {
         margin-left: 0;
     }
+
+    .graphs {
+        display: block;
+        width: 100%;
+    }
+
+    .graph {
+        width: 100%;
+    }
 }
 
-@media screen and (max-width: 640px) { 
+@media screen and (max-width: 660px) { 
     main {
         padding-left: 60px;
     }
