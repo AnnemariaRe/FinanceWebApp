@@ -53,10 +53,6 @@ table {
     border-collapse: collapse;
 }
 
-.accounts-body table tr:nth-child(even) {
-    background-color: #f1eee5;
-}
-
 .history-list table tr:nth-child(even) {
     background-color: #F5F5F5;
 }
@@ -103,12 +99,6 @@ table {
     margin: 40px 5px;
 }
 
-.history {
-    width: 57%;
-    background-color: #F9F7F0;
-    margin: 20px;
-}
-
 .history-list {
     width: 57%;
     background-color: white;
@@ -117,13 +107,12 @@ table {
 
 .account-block {
     display: block;
-    margin-left: 10px;
     margin-top: 25px;
 }
 
 .accounts {
     display: table;
-    width: 100%;
+    width: 99%;
 }
 
 .accounts-body table {
@@ -131,14 +120,28 @@ table {
     width: 100%;
 }
 
+.accounts-body table td {
+    text-align: left;
+    border-top: 2px solid #3e5c4d;
+    border-bottom: 2px solid #3e5c4d;
+    background-color: white;
+    color: #3e5c4d;
+}
+
+.accounts-body table tr:nth-child(even) {
+    background-color: #F5F5F5;
+}
+
 .accounts-header {
-    background-color: #6F8C6E;
+    background-color: #F5F5F5;
     padding: 25px;
+    border-top: 2px solid #3e5c4d;
 }
 
 .accounts-header h3 {
-    color: white;
+    color: #344e41;
     margin: 0;
+    margin-left: 10px;
     margin-bottom: 3px;
     font-weight: 600;
     font-size: 24px;
@@ -157,7 +160,7 @@ table {
 
 .accounts-body table td {
     font-weight: bold;
-    padding: 15px;
+    padding: 20px;
 }
 
 .accounts-body table tr {

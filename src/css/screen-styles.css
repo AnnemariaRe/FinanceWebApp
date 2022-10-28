@@ -3,9 +3,13 @@
         padding-left: 0px;
         padding-right: 20px;
     }
+
+    .accounts {
+        margin-left: 0px;
+    }
 }
 
-@media screen and (max-width: 1560px) {
+@media screen and (max-width: 1570px) {
     .content {
         width: 1300px;
     }
@@ -158,6 +162,11 @@
     table td, table th {
         padding: 25px 20px;
     }
+
+    .accounts-body table td {
+        font-weight: bold;
+        padding: 20px 15px;
+    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -228,6 +237,14 @@
     .graph {
         width: 50%;
     }
+
+    .active .btn-a, .unactive .btn-a {
+        display: none;
+    }
+
+    .accounts {
+        margin-left: 10px;;
+    }
 }
 
 @media screen and (min-width: 1015px) { 
@@ -280,6 +297,10 @@
 
     footer {
         display: none;
+    }
+
+    .accounts {
+        margin-left: 5px;
     }
 }
 
@@ -352,7 +373,18 @@
         width: 90%;
         margin-left: 10px;
     }
+
+    .accounts {
+        margin-left: 20px;
+    }
 }
+
+@media screen and (max-width: 930px) { 
+    .accounts-body table td .type, .accounts-body table .type {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 787px) { 
     .buttons {
         margin-right: -10px;
@@ -399,6 +431,12 @@
 
     .graph {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 660px) { 
+    .accounts-body table td .fa-ruble, .accounts-body table td .fa-euro  {
+        display: none;
     }
 }
 
@@ -454,6 +492,9 @@
         padding: 10px 50px;
     }
 
+    .accounts-body table td .currency  {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 582px) { 
@@ -491,6 +532,14 @@
 
     .exchange-table td {
         padding: 10px 40px;
+    }
+
+    .accounts-body table td {
+        padding: 20px 10px;
+    }
+
+    .accounts-body table td span {
+        display: none;
     }
 }
 
