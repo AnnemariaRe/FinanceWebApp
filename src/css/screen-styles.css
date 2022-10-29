@@ -60,7 +60,7 @@
     }
 
     .graphs {
-        margin-top: -1100px;
+        margin-top: -1190px;
     }
 }
 
@@ -86,7 +86,8 @@
     }
 
     .graphs {
-        margin-top: -1200px;
+        width: 40%;
+        margin-top: -1320px;
     }
 }
 
@@ -117,10 +118,6 @@
 
     .month-balance-all {
         margin-top: -670px;
-    }
-
-    .graphs {
-        width: 40%;
     }
 }
 
