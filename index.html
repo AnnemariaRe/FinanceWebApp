@@ -73,23 +73,29 @@
                     <canvas id="myChart" style="width:100%;max-width:650px"></canvas>
 
                     <script>
-                    var xValues = ["1", "2", "3", "4", "5", "6", "7"];
-                    var yValues = [750, 490, 640, 840, 750, 1200, 480];
-                    var barColors = ["#C5CEB6","#C5CEB6","#C5CEB6","#C5CEB6","#C5CEB6","#C5CEB6","#C5CEB6"];
-
-                    new Chart("myChart", {
-                    type: "bar",
-                    data: {
-                        labels: xValues,
-                        datasets: [{
-                        backgroundColor: barColors,
-                        data: yValues
-                        }]
-                    },
-                    options: {
-                        legend: {display: false},
-                    }
-                    });
+                        var max = 5000
+                        var min = 100
+                        var data = []
+                        var colors = []
+                        for (let i = 0; i < 7; i++) {
+                            data[i] = Math.floor(Math.random() * (max - min) + min);
+                            colors[i] = "#C5CEB6";
+                        }
+                        var xValues = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+                        
+                        new Chart("myChart", {
+                        type: "bar",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                            backgroundColor: colors,
+                            data: data
+                            }]
+                        },
+                        options: {
+                            legend: {display: false},
+                        }
+                        });
                     </script>                    
                 </section>
             </section>
