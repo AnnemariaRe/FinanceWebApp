@@ -1,7 +1,13 @@
 .graph-expense {
     width: 50%;
-    padding: 10px;
-    margin-bottom: 10px;
+    margin-top: -360px;
+    margin-right: 50px;
+    float: right;
+}
+
+.graph-expense h3 {
+    margin: 5px;
+    text-align: center;
 }
 
 .graph {
@@ -10,14 +16,12 @@
 }
 
 img {
-    padding: 30px 60px;
+    padding: 30px 40px;
     width: 100px;
     height: 100px;
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
     text-align: center;
     float: none;
     margin: 0 auto;
@@ -27,12 +31,14 @@ img {
     color: #344e41;
 }
 
-.active {
+.active, .active .btn-a {
     color: #459743;
+    font-weight: bold;
 }
 
-.unactive {
+.unactive, .unactive .btn-a {
     color: #974943;
+    font-weight: bold;
 }
 
 .accounts-body table td a {

@@ -13,16 +13,25 @@
     <script src="../components/footer.js" type="text/javascript" defer></script>
     <script src="../components/page-load.js" type="text/javascript"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <div class="menu-bar">
-            <img src="./../img/calculator.png" width="120px" height="120px"/>
             <nav class="menu-nav">
-                <a href="./../../index.html">Главная</a>
-                <a href="./../pages/wallet.html">Кошелек</a>
-                <a href="./../pages/history.html">История</a>
+                <a href="./../../index.html">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Главная</span>
+                </a>
+                <a href="./../pages/wallet.html">
+                    <span class="icon"><i class="fa fa-tasks" aria-hidden="true"></i></span>
+                    <span class="title">Кошелек</span>
+                </a>
+                <a href="./../pages/history.html">
+                    <span class="icon"><i class="fa fa-history" aria-hidden="true"></i></span>
+                    <span class="title">История</span>
+                </a>
             </nav>
         </div>
         </header>
@@ -131,23 +140,32 @@
                         <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
 
                         <script>
+                            var max = 10000
+                            var min = 1000
+                            var data = []
+                            var colors = []
+
+                            function generateRandomColor() {
+                                const h = Math.floor(Math.random() * 100),
+                                s = 20 + '%',
+                                l = 50 + '%';
+                                return `hsl(${h},${s},${l})`;
+                            }
+
+                            for (let i = 0; i < 5; i++) {
+                                data[i] = Math.floor(Math.random() * (max - min) + min);
+                                colors[i] = generateRandomColor();
+                            }
+
                         var xValues = ["Продукты", "Рестораны", "Бытовые", "Коммунальные", "Услуги красоты"];
-                        var yValues = [5200, 701, 4456, 2400, 1500];
-                        var barColors = [
-                        "#426840",
-                        "#459743",
-                        "#A0C69F",
-                        "#344e41",
-                        "#8BDB89"
-                        ];
                         
                         new Chart("myChart", {
                         type: "pie",
                         data: {
                             labels: xValues,
                             datasets: [{
-                            backgroundColor: barColors,
-                            data: yValues
+                            backgroundColor: colors,
+                            data: data
                             }]
                         },
                         options: {
@@ -164,22 +182,31 @@
                         <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
 
                         <script>
+                            var max = 10000
+                            var min = 2000
+                            var data = []
+                            var colors = []
+
+                            function generateRandomColor() {
+                                const h = Math.floor(Math.random() * 100),
+                                s = 20 + '%',
+                                l = 50 + '%';
+                                return `hsl(${h},${s},${l})`;
+                            }
+
+                            for (let i = 0; i < 4; i++) {
+                                data[i] = Math.floor(Math.random() * (max - min) + min);
+                                colors[i] = generateRandomColor();
+                            }
                         var xValues = ["Зарплата", "Подработка", "Подарки", "Стипендия"];
-                        var yValues = [40000, 8000, 15000, 5000];
-                        var barColors = [
-                        "#426840",
-                        "#459743",
-                        "#A0C69F",
-                        "#344e41"
-                        ];
                         
                         new Chart("myChart2", {
                         type: "pie",
                         data: {
                             labels: xValues,
                             datasets: [{
-                            backgroundColor: barColors,
-                            data: yValues
+                            backgroundColor: colors,
+                            data: data
                             }]
                         },
                         options: {
