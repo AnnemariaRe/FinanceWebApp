@@ -47,19 +47,19 @@
                         <span class="btn-text">снять</span> 
                     </a>
 
-                    <a class="open-button" onclick="document.getElementById('id01').style.display='block'">
+                    <a class="open-button" onclick="document.getElementById('id02').style.display='block'">
                         <i class="fa fa-plus"></i>
                         <span class="btn-text">положить</span> 
                     </a>
 
                     <div id="id01" class="modal">
-                        <form class="modal-content animate" action="*" method="post">
+                        <form class="modal-content animate" action="/src/components/expense_data.js" method="post">
                           <div class="container">
                             <label for="expense_amount"><b>Сумма</b></label>
                             <input type="text" placeholder="Введите потраченную сумму" name="expense_amount" required>
                       
-                            <label for="category"><b>Категория</b></label>
-                            <select name="category">
+                            <label for="expense_category"><b>Категория</b></label>
+                            <select name="expense_category">
                                 <option value="s1" selected>Продукты</option>
                                 <option value="s2">Рестораны</option>
                                 <option value="s3">Транспорт</option>
@@ -78,9 +78,44 @@
                             </select> 
 
                             <label for="date"><b>Дата транзакции</b></label><br>
-                            <input type="date" id="today">
+                            <input type="date" id="today1">
                             <script>
-                                document.getElementById('today').valueAsDate = new Date();
+                                document.getElementById('today1').valueAsDate = new Date();
+                            </script> <br>
+                              
+                            <button class="submit" type="submit">Отправить</button>
+                          </div>
+                        </form>
+                    </div>
+
+                    <div id="id02" class="modal">
+                        <form class="modal-content animate" action="*" method="post">
+                          <div class="container">
+                            <label for="income_amount"><b>Сумма</b></label>
+                            <input type="text" placeholder="Введите полученную сумму" name="income_amount" required>
+                      
+                            <label for="income_category"><b>Категория</b></label>
+                            <select name="income_category">
+                                <option value="s1" selected>Зарплата</option>
+                                <option value="s2">Стипендия</option>
+                                <option value="s3">Подработка</option>
+                                <option value="s4">Кешбек</option>
+                                <option value="s5">Подарки</option>
+                            </select> 
+
+                            <label for="account"><b>Счет зачисления</b></label>
+                            <select name="account">
+                                <option value="s1" selected>Сбербанк (основной)</option>
+                                <option value="s2">Сбербанк (сберегательный)</option>
+                                <option value="s3">Альфабанк (основной)</option>
+                                <option value="s4">Альфабанк (зарплатный)</option>
+                                <option value="s5">Наличные</option>
+                            </select> 
+
+                            <label for="date"><b>Дата транзакции</b></label><br>
+                            <input type="date" id="today2">
+                            <script>
+                                document.getElementById('today2').valueAsDate = new Date();
                             </script> <br>
                               
                             <button class="submit" type="submit">Отправить</button>
@@ -89,11 +124,15 @@
                     </div>
 
                     <script>
-                        var modal = document.getElementById('id01');
+                        var modal1 = document.getElementById('id01');
+                        var modal2 = document.getElementById('id02');
                         
                         window.onclick = function(event) {
-                            if (event.target == modal) {
-                                modal.style.display = "none";
+                            if (event.target == modal1) {
+                                modal1.style.display = "none";
+                            }
+                            if (event.target == modal2) {
+                                modal2.style.display = "none";
                             }
                         }
                     </script>
