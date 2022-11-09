@@ -143,18 +143,21 @@
                             var max = 10000
                             var min = 1000
                             var data = []
-                            var colors = []
+                            var colors = ["#B6D383", "#D1E59D", "#EAF2BF", "#E7E5D8", "#859178", 
+                            "#90837A"]
 
-                            function generateRandomColor() {
-                                const h = Math.floor(Math.random() * 100),
-                                s = 20 + '%',
-                                l = 50 + '%';
-                                return `hsl(${h},${s},${l})`;
+                            function generateRandomColor(colors, n) {
+                                var random = [];
+                                for (let i = 0; i < n; i++) {
+                                    j = Math.floor(Math.random() * colors.length);
+                                    random[i] = colors[j];
+                                    colors.splice(j, 1);
+                                }
+                                return random;
                             }
 
                             for (let i = 0; i < 5; i++) {
                                 data[i] = Math.floor(Math.random() * (max - min) + min);
-                                colors[i] = generateRandomColor();
                             }
 
                         var xValues = ["Продукты", "Рестораны", "Бытовые", "Коммунальные", "Услуги красоты"];
@@ -164,7 +167,7 @@
                         data: {
                             labels: xValues,
                             datasets: [{
-                            backgroundColor: colors,
+                            backgroundColor: generateRandomColor(colors, 5),
                             data: data
                             }]
                         },
@@ -185,18 +188,21 @@
                             var max = 10000
                             var min = 2000
                             var data = []
-                            var colors = []
+                            var colors = ["#B6D383", "#D1E59D", "#EAF2BF", "#E7E5D8", "#859178", 
+                            "#90837A"]
 
-                            function generateRandomColor() {
-                                const h = Math.floor(Math.random() * 100),
-                                s = 20 + '%',
-                                l = 50 + '%';
-                                return `hsl(${h},${s},${l})`;
+                            function generateRandomColor(colors, n) {
+                                var random = [];
+                                for (let i = 0; i < n; i++) {
+                                    j = Math.floor(Math.random() * colors.length);
+                                    random[i] = colors[j];
+                                    colors.splice(j, 1);
+                                }
+                                return random;
                             }
 
                             for (let i = 0; i < 4; i++) {
                                 data[i] = Math.floor(Math.random() * (max - min) + min);
-                                colors[i] = generateRandomColor();
                             }
                         var xValues = ["Зарплата", "Подработка", "Подарки", "Стипендия"];
                         
@@ -205,7 +211,7 @@
                         data: {
                             labels: xValues,
                             datasets: [{
-                            backgroundColor: colors,
+                            backgroundColor: generateRandomColor(colors, 5),
                             data: data
                             }]
                         },
@@ -220,6 +226,5 @@
                 </div>
         </div>
     </main>
-    <footer-component></footer-component>
 </body>
 </html>

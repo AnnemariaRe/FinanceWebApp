@@ -34,7 +34,7 @@
         width: 1200px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 10px;
     }
 
@@ -52,7 +52,7 @@
         width: 1150px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 30px;
         margin-left: -10px;
     }
@@ -79,7 +79,7 @@
         width: 1100px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 10px;
     }
 
@@ -106,7 +106,7 @@
         width: 1000px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 10px;
     }
 
@@ -136,7 +136,7 @@
         width: 900px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 10px;
     }
 
@@ -325,7 +325,7 @@
         width: 50%;
     }
 
-    .first-block a {
+    .open-button {
         width: 10%;
         padding: 10px 5%;
         margin: 10px 3%;
@@ -384,11 +384,13 @@
     .accounts {
         margin-left: 20px;
     }
-}
-
-@media screen and (max-width: 930px) { 
+    
     .accounts-body table td .type, .accounts-body table .type {
         display: none;
+    }
+
+    .modal-content {
+        width: 60%; 
     }
 }
 
@@ -411,7 +413,7 @@
         margin-left: 3%;
     }
 
-    .first-block a {
+    .open-button {
         font-size: 15px;
     }
 
@@ -473,7 +475,7 @@
         width: 70px;
     }
 
-    .first-block a {
+    .open-button {
         font-size: 15px;
         margin: 20px 2%;
     }
@@ -513,7 +515,7 @@
         width: 40%;
     }
 
-    .first-block a {
+    .open-button {
         width: 10%;
         margin: 20px 4%;
         padding: 10px 20px;
@@ -581,7 +583,7 @@
         margin-right: -40px;
     }
 
-    .first-block a {
+    .open-button {
         width: 8%;
         margin: 20px 2%;
         padding: 8px 10px;
@@ -674,7 +676,7 @@
         margin-right: 0px;
     }
 
-    .first-block a {
+    .open-button {
         width: 40%;
         margin: 10px 10px;
         padding: 8px 20px;

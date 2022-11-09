@@ -42,16 +42,61 @@
                     <h1>WalletKeeper</h1>
                 </div>
                 <div class="buttons">
-                    <a href="#" class="button">
-                    <i class="fa fa-minus"></i>
-                    <span class="btn-text">снять</span> 
+                    <a class="open-button" onclick="document.getElementById('id01').style.display='block'">
+                        <i class="fa fa-minus"></i>
+                        <span class="btn-text">снять</span> 
                     </a>
 
-                    <a href="#" class="button">
-                    <i class="fa fa-plus"></i>
-                    <span class="btn-text">положить</span> 
+                    <a class="open-button" onclick="document.getElementById('id01').style.display='block'">
+                        <i class="fa fa-plus"></i>
+                        <span class="btn-text">положить</span> 
                     </a>
-                    
+
+                    <div id="id01" class="modal">
+                        <form class="modal-content animate" action="*" method="post">
+                          <div class="container">
+                            <label for="expense_amount"><b>Сумма</b></label>
+                            <input type="text" placeholder="Введите потраченную сумму" name="expense_amount" required>
+                      
+                            <label for="category"><b>Категория</b></label>
+                            <select name="category">
+                                <option value="s1" selected>Продукты</option>
+                                <option value="s2">Рестораны</option>
+                                <option value="s3">Транспорт</option>
+                                <option value="s4">Жилье</option>
+                                <option value="s5">Медицина</option>
+                                <option value="s6">Путешестия</option>
+                            </select> 
+
+                            <label for="account"><b>Счет списания</b></label>
+                            <select name="account">
+                                <option value="s1" selected>Сбербанк (основной)</option>
+                                <option value="s2">Сбербанк (сберегательный)</option>
+                                <option value="s3">Альфабанк (основной)</option>
+                                <option value="s4">Альфабанк (зарплатный)</option>
+                                <option value="s5">Наличные</option>
+                            </select> 
+
+                            <label for="date"><b>Дата транзакции</b></label><br>
+                            <input type="date" id="today">
+                            <script>
+                                document.getElementById('today').valueAsDate = new Date();
+                            </script> <br>
+                              
+                            <button class="submit" type="submit">Отправить</button>
+                          </div>
+                        </form>
+                    </div>
+
+                    <script>
+                        var modal = document.getElementById('id01');
+                        
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
                 </div>
                 
             </section>
@@ -195,7 +240,6 @@
             </section>
         </div>
     </main>
-    <footer-component></footer-component>   
 </body>
 </html>
 

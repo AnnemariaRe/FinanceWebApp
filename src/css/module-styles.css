@@ -153,10 +153,11 @@ table {
     line-height: 20px;
 }
 
-.accounts-body table td span {
+.accounts-body table td span, .subtitle {
     color: #C2C2C2;
     font-weight: 400;
 }
+
 
 .accounts-body table td {
     font-weight: bold;
