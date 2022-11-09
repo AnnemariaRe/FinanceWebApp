@@ -41,10 +41,55 @@
                 <div class="accounts">
                     <div class="accounts-header">
                         <h3>Счета</h3>
-                        <a href="#" class="button">
+                        <a class="open-button" onclick="document.getElementById('id03').style.display='block'">
                             <i class="fa fa-plus"></i>
                             Добавить счет
                         </a>
+
+                        <div id="id03" class="modal">
+                            <form class="modal-content animate" action="/src/components/expense_data.js" method="post">
+                              <div class="container">
+                                <label for="account_name"><b>Название счета</b></label>
+                                <input type="text" placeholder="Введите название счета" name="account_name" required>
+
+                                <label for="current_amount"><b>Сумма</b></label>
+                                <input type="text" placeholder="Введите текущую сумму" name="current_amount" required>
+                          
+                                <label for="currency"><b>Валюта</b></label>
+                                <select name="currency">
+                                    <option value="s1" selected>Российский рубль</option>
+                                    <option value="s2">Доллар</option>
+                                    <option value="s3">Евро</option>
+                                </select> 
+    
+                                <label for="account_type"><b>Тип счета</b></label>
+                                <select name="account_type">
+                                    <option value="s1" selected>Основной</option>
+                                    <option value="s2">сберегательный</option>
+                                    <option value="s3">Зарплатный</option>
+                                </select> 
+                                  
+                                <button class="submit" type="submit">Создать</button>
+                              </div>
+                            </form>
+                        </div>
+
+                        <script>
+                            var modal = document.getElementById('id03');
+                            
+                            window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
+    
+                            async function handleFormSubmit(event) {
+                                event.preventDefault()
+                            }
+    
+                            const applicantForm = document.getElementById('id03')
+                            applicantForm.addEventListener('submit', handleFormSubmit)
+                        </script>
                     </div>
 
                     <div class="accounts-body">
