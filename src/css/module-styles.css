@@ -57,11 +57,19 @@ table {
     background-color: #F5F5F5;
 }
 
+.history-list {
+    width: 50%;
+}
+
+.month-balance-all, .history-list {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    margin-right: -100%;
+}
+
 .month-balance-all {
     width: 40%;
-    display: table;
-    float: right;
-    margin-top: -560px;
 }
 
 .month-balance-item {
@@ -80,11 +88,9 @@ table {
 
 .exchange {
     width: 100%;
-    padding: 10px 25px;
+    padding: 10px 0px;
     text-align: center;
-    margin: 5% 15%;
-    margin-left: 75px;
-    margin-top: 20px;
+    margin: 5% 0%;
 }
 
 .graphs {
@@ -172,11 +178,13 @@ table {
 
 .exchange-table {
     border: 2px solid #3e5c4d;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .exchange-table td {
     background-color: white;
-    padding: 10px 45px;
+    padding: 10px 68px;
 }
 
 .exchange-table th {

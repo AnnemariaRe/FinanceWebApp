@@ -7,7 +7,8 @@ html {
 main {
     padding-left: 190px;
     padding-right: 25px;
-    height: 100%;
+    height: auto;
+    overflow: auto;
 }
 
 div {
