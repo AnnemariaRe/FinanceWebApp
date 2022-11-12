@@ -5,7 +5,6 @@ function onFormSubmit2() {
     let date = document.getElementById("today2").value;
     let check = document.getElementById("check2").value;
 
-    let now = new Date();
     let submit_info = { amount, category, account, date, check };
-    localStorage.setItem(now.toLocaleString(), JSON.stringify(submit_info));
+    localStorage.setItem(10000 - localStorage.length, JSON.stringify(submit_info));
 }

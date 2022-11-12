@@ -2,9 +2,15 @@ window.onload = function () {
     // localStorage.clear();
     const submits = { ...localStorage };
 
+    var i = 0;
+    console.log(submits);
+    console.log(localStorage.getItem(10000 - localStorage.length + 1 + "tr"));
     for (let submit in submits) {
+        if (i > 6) { break; }
+        if (submit.endsWith("acc")) { continue; }
         let submit_info = JSON.parse(localStorage[submit]);
-        document.getElementById("tbody").innerHTML += generateSubmit(submit_info);
+        document.getElementById("main").innerHTML += generateSubmit(submit_info);
+        i++;
     }
 }
 
