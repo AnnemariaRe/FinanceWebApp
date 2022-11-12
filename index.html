@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="src/components/footer.js" type="text/javascript" defer></script>
     <script src="src/components/page-load.js" type="text/javascript"></script>  
+    <script src="src/components/expense_data.js" type="text/javascript"></script>
+    <script src="src/components/income_data.js" type="text/javascript"></script>
+    <script src="src/components/onload.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -44,37 +47,37 @@
                 <div class="buttons">
                     <a class="open-button" onclick="document.getElementById('id01').style.display='block'">
                         <i class="fa fa-minus"></i>
-                        <span class="btn-text">снять</span> 
+                        <span class="btn-text">Снять</span> 
                     </a>
 
                     <a class="open-button" onclick="document.getElementById('id02').style.display='block'">
                         <i class="fa fa-plus"></i>
-                        <span class="btn-text">положить</span> 
+                        <span class="btn-text">Положить</span> 
                     </a>
 
                     <div id="id01" class="modal">
-                        <form class="modal-content animate" action="/src/components/expense_data.js" method="post">
+                        <form class="modal-content animate" onsubmit="onFormSubmit1()">
                           <div class="container">
                             <label for="expense_amount"><b>Сумма</b></label>
-                            <input type="text" placeholder="Введите потраченную сумму" name="expense_amount" required>
+                            <input type="text" placeholder="Введите потраченную сумму" id="expense_amount" required>
                       
                             <label for="expense_category"><b>Категория</b></label>
-                            <select name="expense_category">
-                                <option value="s1" selected>Продукты</option>
-                                <option value="s2">Рестораны</option>
-                                <option value="s3">Транспорт</option>
-                                <option value="s4">Жилье</option>
-                                <option value="s5">Медицина</option>
-                                <option value="s6">Путешестия</option>
+                            <select id="expense_category">
+                                <option selected>Продукты</option>
+                                <option>Рестораны</option>
+                                <option>Транспорт</option>
+                                <option>Жилье</option>
+                                <option>Медицина</option>
+                                <option>Путешестия</option>
                             </select> 
 
                             <label for="account"><b>Счет списания</b></label>
-                            <select name="account">
-                                <option value="s1" selected>Сбербанк (основной)</option>
-                                <option value="s2">Сбербанк (сберегательный)</option>
-                                <option value="s3">Альфабанк (основной)</option>
-                                <option value="s4">Альфабанк (зарплатный)</option>
-                                <option value="s5">Наличные</option>
+                            <select id="account">
+                                <option selected>Сбербанк (основной)</option>
+                                <option>Сбербанк (сберегательный)</option>
+                                <option>Альфабанк (основной)</option>
+                                <option>Альфабанк (зарплатный)</option>
+                                <option>Наличные</option>
                             </select> 
 
                             <label for="date"><b>Дата транзакции</b></label><br>
@@ -84,32 +87,33 @@
                             </script> <br>
                               
                             <button class="submit" type="submit">Отправить</button>
+                            <select id="check1"><option selected>-</option></select> 
                           </div>
                         </form>
                     </div>
 
                     <div id="id02" class="modal">
-                        <form class="modal-content animate" action="*" method="post">
+                        <form class="modal-content animate" onsubmit="onFormSubmit2()">
                           <div class="container">
                             <label for="income_amount"><b>Сумма</b></label>
-                            <input type="text" placeholder="Введите полученную сумму" name="income_amount" required>
+                            <input type="text" placeholder="Введите полученную сумму" id="income_amount" required>
                       
                             <label for="income_category"><b>Категория</b></label>
-                            <select name="income_category">
-                                <option value="s1" selected>Зарплата</option>
-                                <option value="s2">Стипендия</option>
-                                <option value="s3">Подработка</option>
-                                <option value="s4">Кешбек</option>
-                                <option value="s5">Подарки</option>
+                            <select id="income_category">
+                                <option selected>Зарплата</option>
+                                <option>Стипендия</option>
+                                <option>Подработка</option>
+                                <option>Кешбек</option>
+                                <option>Подарки</option>
                             </select> 
 
                             <label for="account"><b>Счет зачисления</b></label>
-                            <select name="account">
-                                <option value="s1" selected>Сбербанк (основной)</option>
-                                <option value="s2">Сбербанк (сберегательный)</option>
-                                <option value="s3">Альфабанк (основной)</option>
-                                <option value="s4">Альфабанк (зарплатный)</option>
-                                <option value="s5">Наличные</option>
+                            <select id="account">
+                                <option selected>Сбербанк (основной)</option>
+                                <option>Сбербанк (сберегательный)</option>
+                                <option>Альфабанк (основной)</option>
+                                <option>Альфабанк (зарплатный)</option>
+                                <option>Наличные</option>
                             </select> 
 
                             <label for="date"><b>Дата транзакции</b></label><br>
@@ -119,6 +123,7 @@
                             </script> <br>
                               
                             <button class="submit" type="submit">Отправить</button>
+                            <select id="check2"><option selected>+</option></select>  
                           </div>
                         </form>
                     </div>
@@ -136,14 +141,6 @@
                             }
                         }
 
-                        async function handleFormSubmit(event) {
-                            event.preventDefault()
-                        }
-
-                        const applicantForm = document.getElementById('id01')
-                        applicantForm.addEventListener('submit', handleFormSubmit)
-                        const applicantForm2 = document.getElementById('id02')
-                        applicantForm2.addEventListener('submit', handleFormSubmit)
                     </script>
                 </div>
                 
@@ -175,7 +172,7 @@
                             data[i] = Math.floor(Math.random() * (max - min) + min);
                             colors[i] = "#C5CEB6";
                         }
-                        var xValues = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
+                        var xValues = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];                        
                         
                         new Chart("myChart", {
                         type: "bar",
@@ -195,58 +192,24 @@
             </section>
             
             <section class="third-block">
-                <div class="history-list">
-                    <table>
-                        <tr>
-                            <th>Категория</th>
-                            <th>Количество</th>
-                            <th>Счет</th>
-                            <th>Дата</th>
-                        </tr>
-                        <tr>
-                            <td>Продукты</td>
-                            <td>-1,067₽</td>
-                            <td>Сбербанк (основной)</td>
-                            <td>18.09.2022</td>
-                        </tr>
-                        <tr>
-                            <td>Продукты</td>
-                            <td>-765₽</td>
-                            <td>Сбербанк (основной)</td>
-                            <td>17.09.2022</td>
-                        </tr>
-                        <tr>
-                            <td>Одежда</td>
-                            <td>-4,091₽</td>
-                            <td>Наличные</td>
-                            <td>16.09.2022</td>
-                        </tr>
-                        <tr>
-                            <td>Бытовые покупки</td>
-                            <td>-3,409₽</td>
-                            <td>Сбербанк (основной)</td>
-                            <td>16.09.2022</td>
-                        </tr>
-                        <tr>
-                            <td>Зарплата</td>
-                            <td>+50,000₽</td>
-                            <td>Альфабанк (основной)</td>
-                            <td>13.09.2022</td>
-                        </tr>
-                        <tr>
-                            <td>Подарок</td>
-                            <td>+9,000₽</td>
-                            <td>Альфабанк (основной)</td>
-                            <td>12.09.2022</td>
-                        </tr>
-                        <tr>
-                            <td>Продукты</td>
-                            <td>-456₽</td>
-                            <td>Сбербанк (основной)</td>
-                            <td>12.09.2022</td>
-                        </tr>
-                      </table>
-                </div>
+                <section class="history-list">
+                    <table id="history">
+                        <tbody id="tbody">
+                            <tr>
+                                <th>Категория</th>
+                                <th>Количество</th>
+                                <th>Счет</th>
+                                <th>Дата</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                      <!-- <script>
+                        window.onload = function () {
+                            var table = document.getElementById("history");
+                            table.innerHTML = localStorage.getItem('table');
+                        }
+                    </script> -->
+                    </section>
 
                 <section class="month-balance-all">
                     <div class="month-balance-item">
@@ -260,7 +223,7 @@
                         <table class="exchange-table">
                             <tr>
                                 <th>Курс</th>
-                                <th>Валют</th>
+                                <th>Валюта</th>
                             </tr>
                             <tr>
                                 <td>RUB</td>
@@ -284,7 +247,7 @@
                             </tr>
                         </table>        
                     </div>
-                </section>
+                </sectio
             </section>
         </div>
     </main>

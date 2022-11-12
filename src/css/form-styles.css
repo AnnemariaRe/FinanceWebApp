@@ -61,7 +61,7 @@ input[type=text], select, input[type=date] {
     background-color: #fefefe;
     margin: 5% auto 15% auto; 
     border: 1px solid #888;
-    width: 30%; 
+    width: 25%; 
 }
 
 .animate {
@@ -91,4 +91,8 @@ input[type=text], select, input[type=date] {
     cursor: pointer;
     float: right;
     border-radius: 5px;
+}
+
+#check1, #check2 {
+    display: none;
 }
