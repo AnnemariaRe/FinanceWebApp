@@ -14,6 +14,8 @@
     <script src="../components/page-load.js" type="text/javascript"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../components/account_data.js" type="text/javascript"></script>  
+    <script src="../components/wallet_onload.js" type="text/javascript"></script>  
 </head>
 
 <body>
@@ -47,26 +49,26 @@
                         </a>
 
                         <div id="id03" class="modal">
-                            <form class="modal-content animate" action="/src/components/expense_data.js" method="post">
+                            <form class="modal-content animate" onsubmit="onFormSubmit3()">
                               <div class="container">
                                 <label for="account_name"><b>Название счета</b></label>
-                                <input type="text" placeholder="Введите название счета" name="account_name" required>
+                                <input type="text" placeholder="Введите название счета" id="account_name" required>
 
                                 <label for="current_amount"><b>Сумма</b></label>
-                                <input type="text" placeholder="Введите текущую сумму" name="current_amount" required>
+                                <input type="text" placeholder="Введите текущую сумму" id="current_amount" required>
                           
                                 <label for="currency"><b>Валюта</b></label>
-                                <select name="currency">
-                                    <option value="s1" selected>Российский рубль</option>
-                                    <option value="s2">Доллар</option>
-                                    <option value="s3">Евро</option>
+                                <select id="currency">
+                                    <option selected>Российский рубль</option>
+                                    <option>Доллар</option>
+                                    <option>Евро</option>
                                 </select> 
     
                                 <label for="account_type"><b>Тип счета</b></label>
-                                <select name="account_type">
-                                    <option value="s1" selected>Основной</option>
-                                    <option value="s2">сберегательный</option>
-                                    <option value="s3">Зарплатный</option>
+                                <select id="account_type">
+                                    <option selected>Основной</option>
+                                    <option>сберегательный</option>
+                                    <option>Зарплатный</option>
                                 </select> 
                                   
                                 <button class="submit" type="submit">Создать</button>
@@ -82,18 +84,11 @@
                                     modal.style.display = "none";
                                 }
                             }
-    
-                            async function handleFormSubmit(event) {
-                                event.preventDefault()
-                            }
-    
-                            const applicantForm = document.getElementById('id03')
-                            applicantForm.addEventListener('submit', handleFormSubmit)
                         </script>
                     </div>
 
                     <div class="accounts-body">
-                        <table>
+                        <table id="account-table">
                             <tr>
                                 <td>
                                     <div class="icon">
