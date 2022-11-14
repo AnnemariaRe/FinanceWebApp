@@ -64,10 +64,6 @@
     .graph-expense {
         margin-top: -340px;
     }
-
-    .graphs {
-        margin-top: -1190px;
-    }
 }
 
 @media screen and (max-width: 1330px) {
@@ -89,7 +85,6 @@
 
     .graphs {
         width: 40%;
-        margin-top: -1320px;
     }
 }
 
@@ -228,7 +223,6 @@
 
     .graphs {
         width: 100%;
-        float: none;
         display: flex;
         margin-top: 0px;
         margin-right: -10px;

@@ -93,12 +93,15 @@ table {
     margin: 5% 0%;
 }
 
+.graphs, .history-list {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    margin-right: -100%;
+}
+
 .graphs {
     width: 42%;
-    float: right;
-    display: table;
-    margin-top: -1100px;
-    margin-right: -10px;
 }
 
 .graph {
