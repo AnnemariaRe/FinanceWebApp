@@ -168,7 +168,14 @@
     }
 
     .buttons {
-        margin-right: 20px;
+        margin-right: 10px;
+    }
+
+    .open-button, button {
+        padding: 10px 10px;
+        margin: 10px 10px;
+        cursor: pointer;
+        border-radius: 6px;
     }
 
     .balance-item {
@@ -388,13 +395,6 @@
     .graphs {
         width: 90%;
     }
-}
-
-@media screen and (max-width: 748px) {
-    .heading {
-        font-size: 20px;
-        margin-left: 3%;
-    }
 
     .open-button {
         font-size: 15px;
@@ -403,6 +403,14 @@
     .buttons {
         margin-top: -50px;
     }
+
+    .heading {
+        font-size: 20px;
+        margin-left: 3%;
+    }
+}
+
+@media screen and (max-width: 748px) {
 
     .month-balance-all {
         margin-left: 10%;

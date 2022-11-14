@@ -17,7 +17,6 @@
     <script src="src/components/expense_data.js" type="text/javascript"></script>
     <script src="src/components/income_data.js" type="text/javascript"></script>
     <script src="src/components/index_onload.js" type="text/javascript"></script>
-    <script src="src/components/accounts.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -73,12 +72,12 @@
                             </select> 
 
                             <label for="account"><b>Счет списания</b></label>
-                            <select id="account">
-                                <option selected><script>String(generateData())</script></option>
+                            <select id="account1">
+                                <!-- <option selected>Сбербанк (основной)</option>
                                 <option>Сбербанк (сберегательный)</option>
                                 <option>Альфабанк (основной)</option>
                                 <option>Альфабанк (зарплатный)</option>
-                                <option>Наличные</option>
+                                <option>Наличные</option> -->
                             </select> 
 
                             <label for="date"><b>Дата транзакции</b></label><br>
@@ -109,12 +108,8 @@
                             </select> 
 
                             <label for="account"><b>Счет зачисления</b></label>
-                            <select id="account">
-                                <option selected>Сбербанк (основной)</option>
-                                <option>Сбербанк (сберегательный)</option>
-                                <option>Альфабанк (основной)</option>
-                                <option>Альфабанк (зарплатный)</option>
-                                <option>Наличные</option>
+                            <select id="account2">
+                                
                             </select> 
 
                             <label for="date"><b>Дата транзакции</b></label><br>
@@ -141,6 +136,13 @@
                                 modal2.style.display = "none";
                             }
                         }
+
+                        // async function handleFormSubmit(event) {
+                        //     event.preventDefault()
+                        // }
+
+                        // const applicantForm = document.getElementById('id01')
+                        // applicantForm.addEventListener('submit', handleFormSubmit)
 
                     </script>
                 </div>
@@ -170,7 +172,7 @@
                         var colors = [];
                         var xValues = [];     
                         
-                        var max = JSON.parse(localStorage.getItem(10000));
+                        var max = JSON.parse(localStorage.getItem(10000 - localStorage.length + 2));
                         for (let submit in submits) {
                             if (submit.endsWith("acc")) { continue; }
                             submit_info = JSON.parse(localStorage[submit]);
@@ -203,12 +205,11 @@
                             if (submit_info.check == "+") { continue; }
 
                             var day = Number(submit_info.date.split('-')[2]);
-                            if (submit_info.date.split('-')[1] == month &&
-                                day > end_day - 9) {
+                            console.log(day);
+                            if (submit_info.date.split('-')[1] == month && day > end_day - 9) {
                                 data[day] += Number(submit_info.amount);
                             }
                         }
-          
                         
                         new Chart("myChart", {
                         type: "bar",
@@ -216,7 +217,7 @@
                             labels: xValues,
                             datasets: [{
                             backgroundColor: colors,
-                            data: data.slice(end_day - 9, end_day)
+                            data: data.slice(end_day - 9, end_day + 1)
                             }]
                         },
                         options: {
@@ -239,12 +240,6 @@
                             </tr>
                         </tbody>
                     </table>
-                      <!-- <script>
-                        window.onload = function () {
-                            var table = document.getElementById("history");
-                            table.innerHTML = localStorage.getItem('table');
-                        }
-                    </script> -->
                     </section>
 
                 <section class="month-balance-all">

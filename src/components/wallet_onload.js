@@ -2,7 +2,6 @@ window.onload = function () {
     const submits = { ...localStorage };
 
     var i = 0;
-    console.log(submits);
     for (let submit in submits) {
         if (submit.endsWith("acc")) {
             let submit_info = JSON.parse(localStorage[submit]);

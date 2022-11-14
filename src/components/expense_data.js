@@ -1,7 +1,7 @@
 function onFormSubmit1() {
     let amount = document.getElementById("expense_amount").value;
     let category = document.getElementById("expense_category").value;
-    let account = document.getElementById("account").value;
+    let account = document.getElementById("account1").value;
     let date = document.getElementById("today1").value;
     let check = document.getElementById("check1").value;
 

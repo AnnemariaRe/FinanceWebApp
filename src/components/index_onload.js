@@ -1,5 +1,5 @@
 window.onload = function () {
-    // localStorage.clear();
+    //localStorage.clear();
     const submits = { ...localStorage };
 
     var i = 0;
@@ -9,6 +9,16 @@ window.onload = function () {
         let submit_info = JSON.parse(localStorage[submit]);
         document.getElementById("main").innerHTML += generateSubmit(submit_info);
         i++;
+    }
+
+    for (let submit in submits) {
+        if (submit.endsWith("acc")) { 
+            let submit_info = JSON.parse(localStorage[submit]);
+            document.getElementById("account1").innerHTML += 
+                    "<option>" + submit_info.name + " (" + submit_info.type + ") </option>";
+            document.getElementById("account2").innerHTML += 
+                    "<option>" + submit_info.name + " (" + submit_info.type + ") </option>";  
+        }
     }
 }
 
