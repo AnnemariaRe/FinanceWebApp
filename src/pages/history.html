@@ -60,9 +60,8 @@
                         <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
 
                         <script>
-                            var max = 10000
-                            var min = 1000
-                            var data = []
+                            const submits = { ...localStorage };
+                            var data = Array(6).fill(0);
                             var colors = ["#e9f5db", "#cfe1b9", "#b5c99a", "#97a97c", "#588157", 
                             "#718355", "#31572c"]
 
@@ -75,12 +74,36 @@
                                 }
                                 return random;
                             }
-
-                            for (let i = 0; i < 5; i++) {
-                                data[i] = Math.floor(Math.random() * (max - min) + min);
+                            for (let submit in submits) {
+                                if (submit.endsWith("acc")) { continue; }
+                                submit_info = JSON.parse(localStorage[submit]);
+                                if (submit_info.check == "+") { continue; }
+                                
+                                switch (submit_info.category) {
+                                    case "Продукты":
+                                        data[0] += Number(submit_info.amount);
+                                        break;
+                                    case "Рестораны":
+                                        data[1] += Number(submit_info.amount);
+                                        break;
+                                    case "Транспорт":
+                                        data[2] += Number(submit_info.amount);
+                                        break;
+                                    case "Жилье":
+                                        data[3] += Number(submit_info.amount);
+                                        break;
+                                    case "Медицина":
+                                        data[4] += Number(submit_info.amount);
+                                        break;
+                                    case "Путешествия":
+                                        data[5] += Number(submit_info.amount);
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
 
-                        var xValues = ["Продукты", "Рестораны", "Бытовые", "Коммунальные", "Услуги красоты"];
+                        var xValues = ["Продукты", "Рестораны", "Транспорт", "Жилье", "Медицина", "Путешествия"];
                         
                         new Chart("myChart", {
                         type: "pie",
@@ -105,9 +128,7 @@
                         <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
 
                         <script>
-                            var max = 10000
-                            var min = 2000
-                            var data = []
+                            var data = Array(5).fill(0);
                             var colors = ["#f9dc5c", "#fae588", "#fcefb4", "#f9dc5c", "#cca000"]
 
                             function generateRandomColor(colors, n) {
@@ -120,9 +141,29 @@
                                 return random;
                             }
 
-                            for (let i = 0; i < 4; i++) {
-                                data[i] = Math.floor(Math.random() * (max - min) + min);
+                            for (let submit in submits) {
+                                if (submit.endsWith("acc")) { continue; }
+                                submit_info = JSON.parse(localStorage[submit]);
+                                if (submit_info.check == "-") { continue; }
+
+                                switch (submit_info.category) {
+                                    case "Зарплата":
+                                        data[0] += Number(submit_info.amount);
+                                        break;
+                                    case "Подработка":
+                                        data[1] += Number(submit_info.amount);
+                                        break;
+                                    case "Подарки":
+                                        data[2] += Number(submit_info.amount);
+                                        break;
+                                    case "Стипендия":
+                                        data[3] += Number(submit_info.amount);
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
+
                         var xValues = ["Зарплата", "Подработка", "Подарки", "Стипендия"];
                         
                         new Chart("myChart2", {
@@ -130,7 +171,7 @@
                         data: {
                             labels: xValues,
                             datasets: [{
-                            backgroundColor: generateRandomColor(colors, 5),
+                            backgroundColor: generateRandomColor(colors, 4),
                             data: data
                             }]
                         },
