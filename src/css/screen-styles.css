@@ -437,7 +437,7 @@
 }
 
 @media screen and (min-width: 660px) { 
-    .accounts-body table td .fa-ruble, .accounts-body table td .fa-euro  {
+    .accounts-body table td .fa-ruble, .accounts-body table td .fa-euro, .accounts-body table td .fa-dollar  {
         display: none;
     }
 }

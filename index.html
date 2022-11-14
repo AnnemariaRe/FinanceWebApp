@@ -17,6 +17,7 @@
     <script src="src/components/expense_data.js" type="text/javascript"></script>
     <script src="src/components/income_data.js" type="text/javascript"></script>
     <script src="src/components/index_onload.js" type="text/javascript"></script>
+    <script src="src/components/accounts.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -73,7 +74,7 @@
 
                             <label for="account"><b>Счет списания</b></label>
                             <select id="account">
-                                <option selected>Сбербанк (основной)</option>
+                                <option selected><script>String(generateData())</script></option>
                                 <option>Сбербанк (сберегательный)</option>
                                 <option>Альфабанк (основной)</option>
                                 <option>Альфабанк (зарплатный)</option>
@@ -204,7 +205,7 @@
                             var day = Number(submit_info.date.split('-')[2]);
                             if (submit_info.date.split('-')[1] == month &&
                                 day > end_day - 9) {
-                                data[day] += day;
+                                data[day] += Number(submit_info.amount);
                             }
                         }
           

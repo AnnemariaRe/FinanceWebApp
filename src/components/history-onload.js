@@ -1,14 +1,11 @@
 window.onload = function () {
-    // localStorage.clear();
     const submits = { ...localStorage };
 
-    var i = 0;
+    console.log("alo");
     for (let submit in submits) {
-        if (i > 6) { break; }
         if (submit.endsWith("acc")) { continue; }
         let submit_info = JSON.parse(localStorage[submit]);
-        document.getElementById("main").innerHTML += generateSubmit(submit_info);
-        i++;
+        document.getElementById("all-history").innerHTML += generateSubmit(submit_info);
     }
 }
 
