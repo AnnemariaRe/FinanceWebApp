@@ -171,23 +171,12 @@
                         var colors = [];
                         var xValues = [];     
                         
-                        var max = JSON.parse(localStorage.getItem(10000 - localStorage.length + 2));
-                        for (let submit in submits) {
-                            if (submit.endsWith("acc")) { continue; }
-                            submit_info = JSON.parse(localStorage[submit]);
-                            if (submit_info.check == "+") { continue; }
-                            if (submit_info.date.split('-')[2] > max.date.split('-')[2] &&
-                                submit_info.date.split('-')[1] == max.date.split('-')[1]) { 
-                                max = submit_info; 
-                            }
-                        }
+                        var now = new Date();
+                        var today = String(now.getDate()).padStart(2, '0');
+                        var month = String(now.getMonth() + 1).padStart(2, '0');
 
-                        var date = max.date.split('-');
-                        var end_day = Number(date[2]);
-                        var month = Number(date[1]);
-
-                        if (end_day > 10) {
-                            var start = end_day - 9;
+                        if (today > 10) {
+                            var start = today - 9;
                         } else {
                             var start = 1;
                         }
@@ -204,8 +193,7 @@
                             if (submit_info.check == "+") { continue; }
 
                             var day = Number(submit_info.date.split('-')[2]);
-                            console.log(day);
-                            if (submit_info.date.split('-')[1] == month && day > end_day - 9) {
+                            if (submit_info.date.split('-')[1] == month && day > today - 9) {
                                 data[day] += Number(submit_info.amount);
                             }
                         }
@@ -216,7 +204,7 @@
                             labels: xValues,
                             datasets: [{
                             backgroundColor: colors,
-                            data: data.slice(end_day - 9, end_day + 1)
+                            data: data.slice(today - 9, today + 1)
                             }]
                         },
                         options: {
