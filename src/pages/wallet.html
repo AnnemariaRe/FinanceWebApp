@@ -14,6 +14,8 @@
     <script src="../components/page-load.js" type="text/javascript"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../components/account_data.js" type="text/javascript"></script>  
+    <script src="../components/wallet_onload.js" type="text/javascript"></script>  
 </head>
 
 <body>
@@ -41,24 +43,64 @@
                 <div class="accounts">
                     <div class="accounts-header">
                         <h3>Счета</h3>
-                        <a href="#" class="button">
+                        <a class="button" onclick="document.getElementById('id03').style.display='block'">
                             <i class="fa fa-plus"></i>
                             Добавить счет
                         </a>
+
+                        <div id="id03" class="modal">
+                            <form class="modal-content animate" onsubmit="onFormSubmit3()">
+                              <div class="container">
+                                <label for="account_name"><b>Название счета</b></label>
+                                <input type="text" placeholder="Введите название счета" id="account_name" required>
+
+                                <label for="current_amount"><b>Сумма</b></label>
+                                <input type="text" placeholder="Введите текущую сумму" id="current_amount" required>
+                          
+                                <label for="currency"><b>Валюта</b></label>
+                                <select id="currency">
+                                    <option selected>Российский рубль</option>
+                                    <option>Доллар</option>
+                                    <option>Евро</option>
+                                </select> 
+    
+                                <label for="account_type"><b>Тип счета</b></label>
+                                <select id="account_type">
+                                    <option selected>Основной</option>
+                                    <option>Сберегательный</option>
+                                    <option>Зарплатный</option>
+                                </select> 
+                                  
+                                <button class="submit" type="submit">Создать</button>
+                              </div>
+                            </form>
+                        </div>
+
+                        <script>
+                            var modal = document.getElementById('id03');
+                            
+                            window.onclick = function(event) {
+                                if (event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
+                        </script>
                     </div>
 
                     <div class="accounts-body">
-                        <table>
-                            <tr>
+                        <table id="account-table">
+                            <!-- <tr>
                                 <td>
                                     <div class="icon">
                                         <i class="fa fa-credit-card"></i>
                                     </div></td>
-                                <td>Сбербанк <br> <span>Название</span></td>
-                                <td>46,021 <br> <span>Количество</span></td>
+                                <td>Сбербанк
+                                    <div class="subtitle">Название</div></td>
+                                <td>46,021
+                                    <div class="subtitle">Количество</div></td>
                                 <td><div class="currency">Российский рубль</div>
                                     <i class="fa fa-ruble"></i>
-                                     <br> <span>Валюта</span></td>
+                                    <div class="subtitle">Валюта</div></td>
                                 <td>
                                     <div class="active">
                                         <i class="fa fa-circle"></i>
@@ -75,11 +117,13 @@
                                     <div class="icon">
                                         <i class="fa fa-bank"></i>
                                     </div></td>
-                                <td>Сбербанк <br> <span>Название</span></td>
-                                <td>134,000 <br> <span>Количество</span></td>
+                                <td>Сбербанк
+                                    <div class="subtitle">Название</div></td>
+                                <td>134,000 
+                                    <div class="subtitle">Количество</div></td>
                                 <td> <div class="currency">Российский рубль</div>
                                     <i class="fa fa-ruble"></i>
-                                     <br> <span>Валюта</span></td>
+                                     <div class="subtitle">Валюта</div></td>
                                 <td>
                                     <div class="active">
                                         <i class="fa fa-circle"></i>
@@ -90,17 +134,19 @@
                                     <a href="#" class="button">
                                         <i class="fa fa-edit"></i>
                                     </a></td>
-                            </tr>
-                            <tr>
+                            </tr> -->
+                            <!-- <tr>
                                 <td>
                                     <div class="icon">
                                         <i class="fa fa-credit-card"></i>
                                     </div></td>
-                                <td>Альфабанк <br> <span>Название</span></td>
-                                <td>15,000 <br> <span>Количество</span></td>
-                                <td> <div class="currency">Российский рубль</div> 
+                                <td>Альфабанк 
+                                    <div class="subtitle">Название</div></td>
+                                <td>15,000 
+                                    <div class="subtitle">Количество</div></td>
+                                <td> <div class="currency">Российский рубль</div>
                                     <i class="fa fa-ruble"></i> 
-                                    <br> <span>Валюта</span></td>
+                                    <div class="subtitle">Валюта</div></td>
                                 <td>
                                     <div class="active">
                                         <i class="fa fa-circle"></i>
@@ -117,11 +163,13 @@
                                     <div class="icon">
                                         <i class="fa fa-credit-card"></i>
                                     </div></td>
-                                <td>Альфабанк <br> <span>Название</span></td>
-                                <td>1,600 <br> <span>Количество</span></td>
+                                <td>Альфабанк 
+                                    <div class="subtitle">Название</div></td>
+                                <td>1,600 
+                                    <div class="subtitle">Количество</div></td>
                                 <td><div class="currency">Евро</div>
                                     <i class="fa fa-euro"></i>
-                                    <br> <span>Валюта</span></td>
+                                    <div class="subtitle">Валюта</div></td>
                                 <td>
                                     <div class="unactive">
                                         <i class="fa fa-circle"></i>
@@ -138,11 +186,13 @@
                                     <div class="icon">
                                         <i class="fa fa-money"></i>
                                     </div></td>
-                                <td>Наличные <br> <span>Название</span></td>
-                                <td>10,560 <br> <span>Количество</span></td>
+                                <td>Наличные 
+                                    <div class="subtitle">Название</div></td>
+                                <td>10,560 
+                                    <div class="subtitle">Количество</div></td>
                                 <td><div class="currency">Российский рубль</div>
                                     <i class="fa fa-ruble"></i>
-                                     <br> <span>Валюта</span></td>
+                                     <div class="subtitle">Валюта</div></td>
                                 <td>
                                     <div class="active">
                                         <i class="fa fa-circle"></i>
@@ -153,7 +203,7 @@
                                     <a href="#" class="button">
                                         <i class="fa fa-edit"></i>
                                     </a></td>
-                            </tr>
+                            </tr> -->
                         </table>
                     </div>
                 </div>
@@ -161,6 +211,5 @@
 
         </div>
     </main>
-    <footer-component></footer-component>
 </body>
 </html>

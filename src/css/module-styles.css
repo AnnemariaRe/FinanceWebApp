@@ -57,11 +57,19 @@ table {
     background-color: #F5F5F5;
 }
 
+.history-list {
+    width: 50%;
+}
+
+.month-balance-all, .history-list {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    margin-right: -100%;
+}
+
 .month-balance-all {
     width: 40%;
-    display: table;
-    float: right;
-    margin-top: -560px;
 }
 
 .month-balance-item {
@@ -80,19 +88,20 @@ table {
 
 .exchange {
     width: 100%;
-    padding: 10px 25px;
+    padding: 10px 0px;
     text-align: center;
-    margin: 5% 15%;
-    margin-left: 75px;
-    margin-top: 20px;
+    margin: 5% 0%;
+}
+
+.graphs, .history-list {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+    margin-right: -100%;
 }
 
 .graphs {
     width: 42%;
-    float: right;
-    display: table;
-    margin-top: -1100px;
-    margin-right: -10px;
 }
 
 .graph {
@@ -106,13 +115,12 @@ table {
 }
 
 .account-block {
-    display: block;
     margin-top: 25px;
 }
 
 .accounts {
     display: table;
-    width: 99%;
+    width: 90%;
 }
 
 .accounts-body table {
@@ -153,10 +161,11 @@ table {
     line-height: 20px;
 }
 
-.accounts-body table td span {
+.accounts-body table td span, .subtitle {
     color: #C2C2C2;
     font-weight: 400;
 }
+
 
 .accounts-body table td {
     font-weight: bold;
@@ -171,11 +180,13 @@ table {
 
 .exchange-table {
     border: 2px solid #3e5c4d;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .exchange-table td {
     background-color: white;
-    padding: 10px 45px;
+    padding: 10px 68px;
 }
 
 .exchange-table th {

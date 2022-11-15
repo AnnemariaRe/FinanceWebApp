@@ -24,8 +24,8 @@
         width: 1300px;
     }
 
-    .exchange {
-        margin-left: 60px;
+    .exchange-table td {
+        padding: 10px 57px;
     }
 }
 
@@ -34,12 +34,12 @@
         width: 1200px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 10px;
     }
 
-    .exchange {
-        margin-left: 60px;
+    .exchange-table td {
+        padding: 10px 51px;
     }
 
     .graph-expense {
@@ -52,25 +52,17 @@
         width: 1150px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 30px;
         margin-left: -10px;
     }
 
-    .exchange {
-        margin-left: 50px;
+    .exchange-table td {
+        padding: 10px 49px;
     }
 
     .graph-expense {
         margin-top: -340px;
-    }
-
-    .month-balance-all {
-        margin-top: -620px;
-    }
-
-    .graphs {
-        margin-top: -1190px;
     }
 }
 
@@ -79,7 +71,7 @@
         width: 1100px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 10px;
     }
 
@@ -87,17 +79,12 @@
         margin-right: -80px;
     }
 
-    .exchange {
-        margin-left: 43px;
-    }
-
-    .month-balance-all {
-        margin-top: -670px;
+    .exchange-table td {
+        padding: 10px 45px;
     }
 
     .graphs {
         width: 40%;
-        margin-top: -1320px;
     }
 }
 
@@ -106,7 +93,7 @@
         width: 1000px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 10px;
     }
 
@@ -114,20 +101,20 @@
         margin-right: -50px;
     }
 
+    .exchange-table td {
+        padding: 10px 44px;
+    }
+
+    .exchange {
+        width: 109%;
+    }
+
     .graph-expense {
         margin-top: -320px;
     }
 
-    .exchange {
-        margin-left: 35px;
-    }
-
     .month-balance-item {
         width: 65%;
-    }
-
-    .month-balance-all {
-        margin-top: -670px;
     }
 }
 
@@ -136,7 +123,7 @@
         width: 900px;
     }
 
-    .first-block a {
+    .open-button {
         margin: 10px 10px;
     }
 
@@ -161,9 +148,8 @@
         margin-top: -280px;
     }
 
-    .month-balance-all {
-        margin-top: -670px;
-        margin-left: 20px;
+    .exchange-table td {
+        padding: 10px 38px;
     }
 
     table td, table th {
@@ -182,7 +168,14 @@
     }
 
     .buttons {
-        margin-right: 20px;
+        margin-right: 10px;
+    }
+
+    .open-button, button {
+        padding: 10px 10px;
+        margin: 10px 10px;
+        cursor: pointer;
+        border-radius: 6px;
     }
 
     .balance-item {
@@ -211,18 +204,20 @@
         width: 95%;
         display: table;
         margin-top: 10px;
-        margin-left: 0;
+        margin-left: 50px;
+        
     }
     
     .month-balance-item {
         width: 90%;
         margin: 15px 0px;
         border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .exchange {
-        width: 100%;
-        margin-left: 120px;
+        width: 90%;
     }
     
     .exchange-table td {
@@ -235,7 +230,6 @@
 
     .graphs {
         width: 100%;
-        float: none;
         display: flex;
         margin-top: 0px;
         margin-right: -10px;
@@ -325,7 +319,7 @@
         width: 50%;
     }
 
-    .first-block a {
+    .open-button {
         width: 10%;
         padding: 10px 5%;
         margin: 10px 3%;
@@ -361,7 +355,6 @@
     
     .exchange {
         width: 90%;
-        margin-left: 10%;
     }
     
     .exchange-table td {
@@ -384,11 +377,13 @@
     .accounts {
         margin-left: 20px;
     }
-}
-
-@media screen and (max-width: 930px) { 
+    
     .accounts-body table td .type, .accounts-body table .type {
         display: none;
+    }
+
+    .modal-content {
+        width: 60%; 
     }
 }
 
@@ -396,22 +391,12 @@
     .buttons {
         margin-right: -10px;
     }
-    .exchange {
-        margin-left: 5%;
-    }
 
     .graphs {
         width: 90%;
     }
-}
 
-@media screen and (max-width: 748px) {
-    .heading {
-        font-size: 20px;
-        margin-left: 3%;
-    }
-
-    .first-block a {
+    .open-button {
         font-size: 15px;
     }
 
@@ -419,8 +404,16 @@
         margin-top: -50px;
     }
 
+    .heading {
+        font-size: 20px;
+        margin-left: 3%;
+    }
+}
+
+@media screen and (max-width: 748px) {
+
     .month-balance-all {
-        margin-left: 7%;
+        margin-left: 10%;
     }
     
     .month-balance-item {
@@ -428,7 +421,11 @@
     }
 
     .exchange {
-        margin-left: 0;
+        width: 90%;
+    }
+    
+    .exchange-table td {
+        padding: 10px 60px;
     }
 
     .graphs {
@@ -442,7 +439,7 @@
 }
 
 @media screen and (min-width: 660px) { 
-    .accounts-body table td .fa-ruble, .accounts-body table td .fa-euro  {
+    .accounts-body table td .fa-ruble, .accounts-body table td .fa-euro, .accounts-body table td .fa-dollar  {
         display: none;
     }
 }
@@ -473,7 +470,7 @@
         width: 70px;
     }
 
-    .first-block a {
+    .open-button {
         font-size: 15px;
         margin: 20px 2%;
     }
@@ -513,7 +510,7 @@
         width: 40%;
     }
 
-    .first-block a {
+    .open-button {
         width: 10%;
         margin: 20px 4%;
         padding: 10px 20px;
@@ -535,6 +532,10 @@
     .month-balance-item {
         width: 80%;
         padding: 10px 10px;
+    }
+
+    .exchange {
+        width: 90%;
     }
 
     .exchange-table td {
@@ -581,7 +582,7 @@
         margin-right: -40px;
     }
 
-    .first-block a {
+    .open-button {
         width: 8%;
         margin: 20px 2%;
         padding: 8px 10px;
@@ -592,6 +593,11 @@
         margin-left: 10px;
     }
 
+    .exchange {
+        width: 80%;
+        margin-left: 20px;
+    }
+
 }
 
 @media screen and (max-width: 470px) { 
@@ -600,27 +606,31 @@
     }
 
     .heading {
-        font-size: 18px;
+        font-size: 20px;
         margin-left: 3%;
     }
 
     .balance-item {
-        font-size: 16px;
+        font-size: 20px;
         padding: 5px;
     }
 
     .month-balance-item {
-        width: 80%;
+        width: 90%;
         font-size: 16px;
         padding: 10px 3px;
     }
 
     .month-balance-all {
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .exhange {
         margin-left: -10px;
+    }
+
+    .exchange-table td {
+        padding: 10px 30px;
     }
 
     .icon {
@@ -674,7 +684,7 @@
         margin-right: 0px;
     }
 
-    .first-block a {
+    .open-button {
         width: 40%;
         margin: 10px 10px;
         padding: 8px 20px;
@@ -682,17 +692,12 @@
 
     .month-balance-item {
         width: 90%;
-        font-size: 16px;
+        font-size: 18px;
         padding: 10px 3px;
-    }
-
-    .month-balance-all {
-        margin-left: 0px;
     }
 
     .exchange {
         margin-top: 0;
-        margin-left: 15px;
     }
 
     .exchange-table td {
@@ -719,7 +724,7 @@
         padding: 10px 3px;
     }
 
-    .exchange {
-        margin-left: 0;
+    .month-balance-all {
+        margin-left: 20px;
     }
 }
