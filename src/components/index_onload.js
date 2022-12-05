@@ -12,12 +12,12 @@ window.onload = function () {
     }
 
     for (let submit in submits) {
-        if (submit.endsWith("acc")) { 
+        if (submit.endsWith("acc")) {
             let submit_info = JSON.parse(localStorage[submit]);
-            document.getElementById("account1").innerHTML += 
-                    "<option>" + submit_info.name + " (" + submit_info.type + ") </option>";
-            document.getElementById("account2").innerHTML += 
-                    "<option>" + submit_info.name + " (" + submit_info.type + ") </option>";  
+            document.getElementById("account1").innerHTML +=
+                "<option>" + submit_info.name + " (" + submit_info.type + ") </option>";
+            document.getElementById("account2").innerHTML +=
+                "<option>" + submit_info.name + " (" + submit_info.type + ") </option>";
         }
     }
 }

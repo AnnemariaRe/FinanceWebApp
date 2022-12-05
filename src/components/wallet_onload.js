@@ -8,7 +8,7 @@ window.onload = function () {
             document.getElementById("account-table").innerHTML += generateSubmit(submit_info);
             i++;
         } else {
-            continue; 
+            continue;
         }
     }
 }
@@ -35,3 +35,4 @@ function generateSubmit(submit_info) {
 
     return tr;
 }
+

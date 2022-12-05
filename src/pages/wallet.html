@@ -11,11 +11,11 @@
     <link href="../css/module-styles.css" rel="stylesheet">
     <link href="../css/screen-styles.css" rel="stylesheet">
     <script src="../components/footer.js" type="text/javascript" defer></script>
-    <script src="../components/page-load.js" type="text/javascript"></script>  
+    <script src="../components/page-load.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../components/account_data.js" type="text/javascript"></script>  
-    <script src="../components/wallet_onload.js" type="text/javascript"></script>  
+    <script src="../components/account_data.js" type="text/javascript"></script>
+    <script src="../components/wallet_onload.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
                 </a>
             </nav>
         </div>
-        </header>
+    </header>
     <main>
         <div class="content">
             <section class="account-block">
@@ -50,36 +50,36 @@
 
                         <div id="id03" class="modal">
                             <form class="modal-content animate" onsubmit="onFormSubmit3()">
-                              <div class="container">
-                                <label for="account_name"><b>Название счета</b></label>
-                                <input type="text" placeholder="Введите название счета" id="account_name" required>
+                                <div class="container">
+                                    <label for="account_name"><b>Название счета</b></label>
+                                    <input type="text" placeholder="Введите название счета" id="account_name" required>
 
-                                <label for="current_amount"><b>Сумма</b></label>
-                                <input type="text" placeholder="Введите текущую сумму" id="current_amount" required>
-                          
-                                <label for="currency"><b>Валюта</b></label>
-                                <select id="currency">
-                                    <option selected>Российский рубль</option>
-                                    <option>Доллар</option>
-                                    <option>Евро</option>
-                                </select> 
-    
-                                <label for="account_type"><b>Тип счета</b></label>
-                                <select id="account_type">
-                                    <option selected>Основной</option>
-                                    <option>Сберегательный</option>
-                                    <option>Зарплатный</option>
-                                </select> 
-                                  
-                                <button class="submit" type="submit">Создать</button>
-                              </div>
+                                    <label for="current_amount"><b>Сумма</b></label>
+                                    <input type="text" placeholder="Введите текущую сумму" id="current_amount" required>
+
+                                    <label for="currency"><b>Валюта</b></label>
+                                    <select id="currency">
+                                        <option selected>Российский рубль</option>
+                                        <option>Доллар</option>
+                                        <option>Евро</option>
+                                    </select>
+
+                                    <label for="account_type"><b>Тип счета</b></label>
+                                    <select id="account_type">
+                                        <option selected>Основной</option>
+                                        <option>Сберегательный</option>
+                                        <option>Зарплатный</option>
+                                    </select>
+
+                                    <button class="submit" type="submit">Создать</button>
+                                </div>
                             </form>
                         </div>
 
                         <script>
                             var modal = document.getElementById('id03');
-                            
-                            window.onclick = function(event) {
+
+                            window.onclick = function (event) {
                                 if (event.target == modal) {
                                     modal.style.display = "none";
                                 }
@@ -89,121 +89,7 @@
 
                     <div class="accounts-body">
                         <table id="account-table">
-                            <!-- <tr>
-                                <td>
-                                    <div class="icon">
-                                        <i class="fa fa-credit-card"></i>
-                                    </div></td>
-                                <td>Сбербанк
-                                    <div class="subtitle">Название</div></td>
-                                <td>46,021
-                                    <div class="subtitle">Количество</div></td>
-                                <td><div class="currency">Российский рубль</div>
-                                    <i class="fa fa-ruble"></i>
-                                    <div class="subtitle">Валюта</div></td>
-                                <td>
-                                    <div class="active">
-                                        <i class="fa fa-circle"></i>
-                                        <span class="btn-a">Активный</span>  
-                                    </div></td>
-                                <td class="type">Основной <br> <span class="type">Тип счета</span></td>
-                                <td>
-                                    <a href="#" class="button">
-                                        <i class="fa fa-edit"></i>
-                                    </a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="icon">
-                                        <i class="fa fa-bank"></i>
-                                    </div></td>
-                                <td>Сбербанк
-                                    <div class="subtitle">Название</div></td>
-                                <td>134,000 
-                                    <div class="subtitle">Количество</div></td>
-                                <td> <div class="currency">Российский рубль</div>
-                                    <i class="fa fa-ruble"></i>
-                                     <div class="subtitle">Валюта</div></td>
-                                <td>
-                                    <div class="active">
-                                        <i class="fa fa-circle"></i>
-                                        <span class="btn-a">Активный</span>  
-                                    </div></td>
-                                <td class="type">Сберегательный <br> <span class="type">Тип счета</span></td>
-                                <td>
-                                    <a href="#" class="button">
-                                        <i class="fa fa-edit"></i>
-                                    </a></td>
-                            </tr> -->
-                            <!-- <tr>
-                                <td>
-                                    <div class="icon">
-                                        <i class="fa fa-credit-card"></i>
-                                    </div></td>
-                                <td>Альфабанк 
-                                    <div class="subtitle">Название</div></td>
-                                <td>15,000 
-                                    <div class="subtitle">Количество</div></td>
-                                <td> <div class="currency">Российский рубль</div>
-                                    <i class="fa fa-ruble"></i> 
-                                    <div class="subtitle">Валюта</div></td>
-                                <td>
-                                    <div class="active">
-                                        <i class="fa fa-circle"></i>
-                                        <span class="btn-a">Активный</span>  
-                                    </div></td>
-                                <td class="type">Зарплатный <br> <span class="type">Тип счета</span></td>
-                                <td>
-                                    <a href="#" class="button">
-                                        <i class="fa fa-edit"></i>
-                                    </a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="icon">
-                                        <i class="fa fa-credit-card"></i>
-                                    </div></td>
-                                <td>Альфабанк 
-                                    <div class="subtitle">Название</div></td>
-                                <td>1,600 
-                                    <div class="subtitle">Количество</div></td>
-                                <td><div class="currency">Евро</div>
-                                    <i class="fa fa-euro"></i>
-                                    <div class="subtitle">Валюта</div></td>
-                                <td>
-                                    <div class="unactive">
-                                        <i class="fa fa-circle"></i>
-                                        <span class="btn-a">Неактивный</span>  
-                                    </div></td>
-                                <td class="type">Основной <br> <span class="type">Тип счета</span></td>
-                                <td>
-                                    <a href="#" class="button">
-                                        <i class="fa fa-edit"></i>
-                                    </a></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="icon">
-                                        <i class="fa fa-money"></i>
-                                    </div></td>
-                                <td>Наличные 
-                                    <div class="subtitle">Название</div></td>
-                                <td>10,560 
-                                    <div class="subtitle">Количество</div></td>
-                                <td><div class="currency">Российский рубль</div>
-                                    <i class="fa fa-ruble"></i>
-                                     <div class="subtitle">Валюта</div></td>
-                                <td>
-                                    <div class="active">
-                                        <i class="fa fa-circle"></i>
-                                        <span class="btn-a">Активный</span>  
-                                    </div></td>
-                                <td class="type">Основной <br> <span class="type">Тип счета</span></td>
-                                <td>
-                                    <a href="#" class="button">
-                                        <i class="fa fa-edit"></i>
-                                    </a></td>
-                            </tr> -->
+                            
                         </table>
                     </div>
                 </div>
@@ -212,4 +98,5 @@
         </div>
     </main>
 </body>
+
 </html>
