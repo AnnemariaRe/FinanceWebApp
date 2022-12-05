@@ -35,4 +35,3 @@ function generateSubmit(submit_info) {
 
     return tr;
 }
-
