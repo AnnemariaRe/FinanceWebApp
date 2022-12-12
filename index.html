@@ -10,8 +10,15 @@
     <link href="src/css/layout-styles.css" rel="stylesheet">
     <link href="src/css/module-styles.css" rel="stylesheet">
     <link href="src/css/screen-styles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+    
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
+
     <script src="src/components/footer.js" type="text/javascript" defer></script>
     <script src="src/components/page-load.js" type="text/javascript"></script>
     <script src="src/components/expense_data.js" type="text/javascript"></script>
@@ -60,6 +67,8 @@
                             <div class="container">
                                 <label for="expense_amount"><b>Сумма</b></label>
                                 <input type="text" placeholder="Введите потраченную сумму" id="expense_amount" required>
+
+                                
 
                                 <label for="expense_category"><b>Категория</b></label>
                                 <select id="expense_category">
@@ -206,7 +215,7 @@
                                 labels: xValues,
                                 datasets: [{
                                     backgroundColor: colors,
-                                    data: data.slice(start2, 11)
+                                    data: data.slice(start2, start2 + 10)
                                 }]
                             },
                             options: {
@@ -219,14 +228,16 @@
 
             <section class="third-block">
                 <section class="history-list">
-                    <table id="history">
-                        <tbody id="main">
+                    <table id="history" class="ui celled table">
+                        <thead>
                             <tr>
                                 <th>Категория</th>
                                 <th>Количество</th>
                                 <th>Счет</th>
                                 <th>Дата</th>
                             </tr>
+                        </thead>
+                        <tbody id="main">
                         </tbody>
                     </table>
                 </section>
@@ -246,7 +257,7 @@
                     </div>
 
                     <div class="month-balance-item">
-                        <h4>расход за месяц: 31000 ₽</h4>
+                        <h4>расход за месяц: 31000 ₽</h4>                      
                     </div>
                     <div class="month-balance-item">
                         <h4>доход за месяц: 50000 ₽</h4>
